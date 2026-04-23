@@ -148,7 +148,7 @@ Extras: ${extrasText}
 Detalle: ${secondNameDetail}
 Precio base del pack: ${basePrice}
 
-Quiero confirmar disponibilidad, pago y siguientes pasos.`;
+Quiero confirmar disponibilidad y recibir el método de pago seguro.`;
 
     const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");

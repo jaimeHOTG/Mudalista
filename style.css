@@ -533,3 +533,11 @@ a{text-decoration:none;color:inherit}
     padding-bottom:18px;
   }
 }
+
+
+.season-help{
+  margin:-4px 0 12px;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.45;
+}
