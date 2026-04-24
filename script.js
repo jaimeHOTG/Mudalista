@@ -116,6 +116,15 @@ function getSecondNameDetail(packKey) {
   return "Sin segundo nombre/apellido en bolsa";
 }
 
+function getPackContentForOrder(packKey) {
+  const list = document.querySelector(`[data-pack-list="${packKey}"]`);
+  if (!list) return "Contenido no especificado";
+  const items = Array.from(list.querySelectorAll("li"))
+    .map((item) => item.textContent.trim())
+    .filter(Boolean);
+  return items.length ? items.join(", ") : "Contenido no especificado";
+}
+
 orderButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const packName = button.dataset.packName;
@@ -134,6 +143,7 @@ orderButtons.forEach((button) => {
     const packStyle = styleSelect.options[styleSelect.selectedIndex].text;
     const extras = getCheckedExtras(packKey);
     const secondNameDetail = getSecondNameDetail(packKey);
+    const packContent = getPackContentForOrder(packKey);
 
     const safeName = childName || "Pendiente de confirmar";
     const extrasText = extras.length ? extras.join(", ") : "Sin extras";
@@ -144,6 +154,7 @@ Nombre del peque: ${safeName}
 Talla: ${size}
 Temporada: ${season}
 Estilo del pack: ${packStyle}
+Contenido del pack: ${packContent}
 Extras: ${extrasText}
 Detalle: ${secondNameDetail}
 Precio base del pack: ${basePrice}
@@ -167,13 +178,49 @@ Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.
 
 /* === Selector por pack MudaLista DEFINITIVO === */
 document.addEventListener('DOMContentLoaded', function () {
-  const seasonData = {"guarderia": {"pv": ["4 bodys de manga corta", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"], "oi": ["4 bodys de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"]}, "infantil": {"pv": ["3 camisetas", "2 pantalones ligeros / shorts", "1 sudadera ligera", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"], "oi": ["3 camisetas de manga larga", "2 pantalones de algodón grueso / felpa", "1 sudadera o jersey", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"]}, "completo": {"pv": ["4 camisetas", "3 pantalones ligeros / shorts", "1 sudadera ligera", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"], "oi": ["4 camisetas de manga larga", "3 pantalones", "1 sudadera más cálida", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"]}};
+  const seasonData = {
+    "guarderia": {
+      "pv": {
+        "0-6 meses": ["5 bodys de manga corta", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"],
+        "6-12 meses": ["4 bodys de manga corta", "1 camiseta", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"],
+        "12-18 meses": ["2 bodys de manga corta", "2 camisetas", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"],
+        "18-24 meses": ["2 bodys de manga corta", "2 camisetas", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"]
+      },
+      "oi": {
+        "0-6 meses": ["5 bodys de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"],
+        "6-12 meses": ["4 bodys de manga larga", "1 camiseta de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"],
+        "12-18 meses": ["2 bodys de manga larga", "2 camisetas de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"],
+        "18-24 meses": ["2 bodys de manga larga", "2 camisetas de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"]
+      }
+    },
+    "infantil": {
+      "pv": ["3 camisetas", "2 pantalones ligeros / shorts", "1 sudadera ligera", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"],
+      "oi": ["3 camisetas de manga larga", "2 pantalones de algodón grueso / felpa", "1 sudadera o jersey", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"]
+    },
+    "completo": {
+      "pv": ["4 camisetas", "3 pantalones ligeros / shorts", "1 sudadera ligera", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"],
+      "oi": ["4 camisetas de manga larga", "3 pantalones", "1 sudadera más cálida", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"]
+    }
+  };
+
+  function getPackItems(pack, season) {
+    if (!seasonData[pack] || !seasonData[pack][season]) return [];
+
+    if (pack === 'guarderia') {
+      const sizeSelect = document.getElementById('size-guarderia');
+      const size = sizeSelect ? sizeSelect.value : '0-6 meses';
+      return seasonData.guarderia[season][size] || seasonData.guarderia[season]['0-6 meses'];
+    }
+
+    return seasonData[pack][season];
+  }
 
   function renderPack(pack, season) {
     const list = document.querySelector('[data-pack-list="' + pack + '"]');
-    if (!list || !seasonData[pack] || !seasonData[pack][season]) return;
+    const items = getPackItems(pack, season);
+    if (!list || !items.length) return;
 
-    list.innerHTML = seasonData[pack][season]
+    list.innerHTML = items
       .map(function (item) { return '<li>' + item + '</li>'; })
       .join('');
   }
@@ -191,6 +238,14 @@ document.addEventListener('DOMContentLoaded', function () {
       renderPack(select.getAttribute('data-pack'), select.value);
     });
   });
+
+  const guarderiaSizeSelect = document.getElementById('size-guarderia');
+  if (guarderiaSizeSelect) {
+    guarderiaSizeSelect.addEventListener('change', function () {
+      const seasonSelect = document.getElementById('season-guarderia');
+      renderPack('guarderia', seasonSelect ? seasonSelect.value : 'pv');
+    });
+  }
 
   syncAllPackSelects();
   window.addEventListener('pageshow', syncAllPackSelects);
