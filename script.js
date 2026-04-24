@@ -154,3 +154,44 @@ Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.
     window.open(url, "_blank");
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+/* === Selector por pack MudaLista DEFINITIVO === */
+document.addEventListener('DOMContentLoaded', function () {
+  const seasonData = {"guarderia": {"pv": ["4 bodys de manga corta", "2 pantalones ligeros / leggings finos", "1 sudadera muy ligera o chaqueta fina", "2 pares de calcetines", "1 bolsa personalizada"], "oi": ["4 bodys de manga larga", "2 pantalones más gruesos", "1 sudadera o jersey", "2 pares de calcetines gruesos", "1 bolsa personalizada"]}, "infantil": {"pv": ["3 camisetas", "2 pantalones ligeros / shorts", "1 sudadera ligera", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"], "oi": ["3 camisetas de manga larga", "2 pantalones de algodón grueso / felpa", "1 sudadera o jersey", "4 prendas de ropa interior", "3 pares de calcetines", "1 bolsa personalizada"]}, "completo": {"pv": ["4 camisetas", "3 pantalones ligeros / shorts", "1 sudadera ligera", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"], "oi": ["4 camisetas de manga larga", "3 pantalones", "1 sudadera más cálida", "5 prendas de ropa interior", "5 pares de calcetines", "1 bolsa personalizada"]}};
+
+  function renderPack(pack, season) {
+    const list = document.querySelector('[data-pack-list="' + pack + '"]');
+    if (!list || !seasonData[pack] || !seasonData[pack][season]) return;
+
+    list.innerHTML = seasonData[pack][season]
+      .map(function (item) { return '<li>' + item + '</li>'; })
+      .join('');
+  }
+
+  function syncAllPackSelects() {
+    document.querySelectorAll('.season-select[data-pack]').forEach(function (select) {
+      const pack = select.getAttribute('data-pack');
+      const season = select.value || 'pv';
+      renderPack(pack, season);
+    });
+  }
+
+  document.querySelectorAll('.season-select[data-pack]').forEach(function (select) {
+    select.addEventListener('change', function () {
+      renderPack(select.getAttribute('data-pack'), select.value);
+    });
+  });
+
+  syncAllPackSelects();
+  window.addEventListener('pageshow', syncAllPackSelects);
+});
