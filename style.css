@@ -541,3 +541,2644 @@ a{text-decoration:none;color:inherit}
   font-size:.86rem;
   line-height:1.45;
 }
+
+
+/* Section differentiation */
+.section.alt{
+  background:#fff;
+}
+.section.soft{
+  background:#fff7fb;
+}
+.section.dark{
+  background:#f3f0f7;
+}
+
+/* Compra guiada centering */
+.cta-section{
+  text-align:center;
+}
+.cta-section .container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Footer balance fix */
+.footer-contact-card{
+  padding:14px 16px !important;
+  border-radius:16px !important;
+  font-size:0.9rem;
+}
+.footer-contact-link{
+  font-size:0.95rem;
+}
+.footer-brand-block{
+  max-width:320px;
+}
+
+
+/* CONTACT REDESIGN */
+.contact-inline{
+  display:flex;
+  gap:14px;
+}
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid #eadff1;
+  text-decoration:none;
+  color:#333;
+  font-weight:700;
+  transition:.2s;
+}
+.contact-item span{
+  display:block;
+  font-weight:600;
+  font-size:.9rem;
+}
+.contact-item:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+.icon{
+  font-size:18px;
+}
+
+
+/* Different layouts */
+.how-section .container{
+  display:flex;
+  gap:30px;
+}
+.how-section .step{
+  flex:1;
+  background:#fff;
+  padding:20px;
+  border-radius:16px;
+}
+
+.audience-section .container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.value-section .container{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.value-section .value-item{
+  background:#fff;
+  padding:16px;
+  border-radius:12px;
+}
+
+.cta-section h2,
+.cta-section p{
+  text-align:center !important;
+  margin-left:auto;
+  margin-right:auto;
+}
+.cta-section p{
+  max-width:600px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:30px;
+}
+.footer .contact-inline{
+  display:flex;
+  gap:12px;
+}
+
+
+/* Strong differentiation */
+
+.how-section{
+  background:#ffffff;
+}
+.how-section .step{
+  border-left:4px solid #ff6fa5;
+}
+
+.audience-section{
+  background:#fff0f6;
+}
+.audience-section .card{
+  background:#fff;
+  padding:18px;
+  border-radius:12px;
+}
+
+.value-section{
+  background:#f5f3fa;
+}
+.value-section .value-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.value-section .value-item::before{
+  content:"✓";
+  color:#ff6fa5;
+  font-weight:bold;
+}
+
+
+/* FOOTER FINAL CLEAN */
+.site-footer{
+  padding:42px 0 96px !important;
+  border-top:1px solid var(--line) !important;
+  background:
+    radial-gradient(circle at top right, rgba(255,111,174,.08), transparent 24%),
+    linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,248,252,.96)) !important;
+}
+
+.footer-final{
+  display:grid !important;
+  grid-template-columns:1.35fr .8fr .95fr !important;
+  gap:34px !important;
+  align-items:flex-start !important;
+}
+
+.footer-brand-area{
+  max-width:520px !important;
+}
+
+.footer-brand{
+  margin-bottom:10px !important;
+}
+
+.footer-copy{
+  margin:0 !important;
+  color:var(--muted) !important;
+  line-height:1.75 !important;
+  font-size:1.04rem !important;
+}
+
+.footer-nav{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:12px !important;
+  font-weight:900 !important;
+  color:var(--muted) !important;
+}
+
+.footer-nav a{
+  width:max-content !important;
+  transition:.2s ease !important;
+}
+
+.footer-nav a:hover{
+  color:var(--pink) !important;
+  transform:translateX(2px) !important;
+}
+
+.footer-contact-final{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:12px !important;
+}
+
+.footer-whatsapp-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  min-height:52px !important;
+  padding:13px 18px !important;
+  border-radius:999px !important;
+  background:#25d366 !important;
+  color:#fff !important;
+  box-shadow:0 14px 26px rgba(37,211,102,.20) !important;
+  font-weight:900 !important;
+  transition:.2s ease !important;
+}
+
+.footer-whatsapp-btn:hover{
+  transform:translateY(-1px) !important;
+  box-shadow:0 18px 34px rgba(37,211,102,.28) !important;
+}
+
+.footer-email-link{
+  display:inline-flex !important;
+  color:var(--pink) !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  padding-left:4px !important;
+}
+
+.footer-email-link:hover{
+  color:var(--pink-dark) !important;
+}
+
+.footer-legal{
+  margin-top:28px !important;
+  padding-top:18px !important;
+  border-top:1px solid rgba(234,223,241,.9) !important;
+  color:var(--muted) !important;
+  font-weight:800 !important;
+  font-size:.95rem !important;
+}
+
+@media (max-width:900px){
+  .footer-final{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+  }
+  .footer-nav{
+    flex-direction:row !important;
+    flex-wrap:wrap !important;
+  }
+}
+
+@media (max-width:640px){
+  .site-footer{
+    padding-bottom:104px !important;
+  }
+  .footer-whatsapp-btn{
+    width:100% !important;
+  }
+}
+
+
+/* SIMPLE FOOTER CONTACT */
+.footer-contact-simple{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-contact-line{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+  color:var(--pink);
+  text-decoration:none;
+  font-size:1rem;
+}
+
+.footer-contact-line:hover{
+  color:var(--pink-dark);
+}
+
+.footer-contact-line .icon{
+  font-size:16px;
+}
+
+
+/* === MUDALISTA PRO FINAL POLISH === */
+.hero-pro-image{
+  width:100%;
+  max-height:390px;
+  object-fit:cover;
+  border-radius:30px;
+  border:1px solid var(--line);
+  box-shadow:0 18px 42px rgba(113,85,145,.12);
+  margin-bottom:18px;
+}
+
+/* Cómo funciona: centered, compact, not broken */
+.how-section-clean{
+  background:linear-gradient(180deg,#fff 0%,#fff8fc 100%);
+}
+.how-section-clean .section-head{
+  margin-bottom:34px !important;
+}
+.how-section-clean .section-head h2,
+.how-section-clean .section-head p{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.process-row{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:16px;
+  align-items:stretch;
+}
+.process-step{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:26px;
+  box-shadow:0 12px 28px rgba(113,85,145,.06);
+  text-align:center;
+}
+.process-step span{
+  display:inline-flex;
+  width:58px;
+  height:58px;
+  align-items:center;
+  justify-content:center;
+  border-radius:20px;
+  background:#fff1f7;
+  color:var(--pink-dark);
+  font-weight:900;
+  font-size:1.3rem;
+  margin-bottom:14px;
+}
+.process-step h3{
+  margin:0 0 8px;
+  font-size:1.18rem;
+}
+.process-step p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+.process-arrow{
+  align-self:center;
+  color:var(--pink);
+  font-weight:900;
+  font-size:1.8rem;
+}
+
+/* Para quién: image + options layout */
+.audience-section-pro{
+  background:#fff;
+}
+.audience-layout{
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:30px;
+  align-items:center;
+}
+.audience-copy{
+  background:linear-gradient(135deg,#fff1f7,#eef9ff);
+  border:1px solid var(--line);
+  border-radius:32px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+.audience-copy h2{
+  font-family:"Baloo 2",cursive;
+  font-size:clamp(2.1rem,3.6vw,3.6rem);
+  line-height:1;
+  letter-spacing:-.03em;
+  margin:0 0 12px;
+}
+.audience-copy p{
+  color:var(--muted);
+  line-height:1.7;
+  margin:0 0 18px;
+}
+.audience-copy img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:24px;
+  border:1px solid rgba(234,223,241,.9);
+}
+.audience-options{
+  display:grid;
+  gap:14px;
+}
+.audience-options > div{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:23px 24px;
+  box-shadow:0 10px 24px rgba(0,0,0,.025);
+}
+.audience-options strong{
+  display:inline-block;
+  font-size:1.22rem;
+  margin-right:10px;
+}
+.audience-options span{
+  color:var(--pink-dark);
+  font-weight:900;
+}
+.audience-options p{
+  margin:8px 0 0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* Lo que transmite: compact and balanced */
+.value-section-pro{
+  background:#fff7fb;
+  padding-top:64px !important;
+}
+.value-compact{
+  max-width:920px;
+  margin:0 auto 30px;
+  text-align:center;
+}
+.value-compact h2{
+  font-family:"Baloo 2",cursive;
+  font-size:clamp(2.1rem,3.7vw,3.9rem);
+  line-height:1;
+  letter-spacing:-.03em;
+  margin:0 0 12px;
+}
+.value-compact p{
+  max-width:700px;
+  margin:0 auto;
+  color:var(--muted);
+  line-height:1.75;
+}
+.benefits-compact{
+  max-width:980px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.benefits-compact > div{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 10px 24px rgba(0,0,0,.025);
+}
+.benefits-compact span{
+  display:inline-flex;
+  width:38px;
+  height:38px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#fff1f7;
+  color:var(--pink-dark);
+  font-weight:900;
+  margin-bottom:12px;
+}
+.benefits-compact strong{
+  display:block;
+  font-size:1.12rem;
+  margin-bottom:6px;
+}
+.benefits-compact p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* Footer final simple */
+.site-footer{
+  padding:42px 0 96px !important;
+}
+.footer-final{
+  display:grid !important;
+  grid-template-columns:1.35fr .8fr .95fr !important;
+  gap:34px !important;
+  align-items:flex-start !important;
+}
+.footer-brand-area{
+  max-width:520px !important;
+}
+.footer-nav{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:12px !important;
+  font-weight:900 !important;
+  color:var(--muted) !important;
+}
+.footer-contact-simple{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+}
+.footer-contact-line{
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  font-weight:800 !important;
+  color:var(--pink) !important;
+  text-decoration:none !important;
+  font-size:1rem !important;
+}
+.footer-legal{
+  margin-top:28px !important;
+  padding-top:18px !important;
+  border-top:1px solid rgba(234,223,241,.9) !important;
+  color:var(--muted) !important;
+  font-weight:800 !important;
+  font-size:.95rem !important;
+}
+
+/* CTA final center */
+.cta-section h2,
+.cta-section p{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.cta-section p{
+  max-width:620px !important;
+}
+
+@media (max-width:960px){
+  .process-row,
+  .audience-layout,
+  .benefits-compact,
+  .footer-final{
+    grid-template-columns:1fr !important;
+  }
+  .process-arrow{
+    display:none;
+  }
+  .audience-copy img{
+    height:200px;
+  }
+}
+
+/* HERO RESTORED: remove abstract illustration and rebalance first section */
+.hero-pro-image{
+  display:none !important;
+}
+
+.hero-visual{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-card{
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Remove abstract audience image if still present */
+.audience-copy img{
+  display:none !important;
+}
+
+/* Keep audience card balanced without image */
+.audience-copy{
+  min-height:auto !important;
+}
+
+
+/* === HERO + PROBLEM CLEANUP === */
+
+.hero-shell{
+  padding-bottom:28px !important;
+}
+
+.hero-copy .hero-text{
+  margin-bottom:22px !important;
+}
+
+.hero-actions{
+  margin-top:6px !important;
+  margin-bottom:18px !important;
+}
+
+.hero-actions .btn-primary{
+  min-width:220px;
+}
+
+.hero-mini{
+  margin-top:8px !important;
+}
+
+.trust-strip-clean{
+  grid-template-columns:repeat(3,1fr) !important;
+  max-width:980px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.problem-clean{
+  background:linear-gradient(180deg,#fff 0%,#fff8fc 100%);
+}
+
+.problem-layout{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:46px;
+  align-items:center;
+}
+
+.problem-copy h2{
+  font-family:"Baloo 2",cursive;
+  font-size:clamp(2.3rem,4.4vw,4.4rem);
+  line-height:.98;
+  letter-spacing:-.035em;
+  margin:0 0 14px;
+}
+
+.problem-copy p{
+  color:var(--muted);
+  font-size:1.08rem;
+  line-height:1.75;
+  max-width:560px;
+  margin:0;
+}
+
+.problem-list-clean{
+  display:grid;
+  gap:14px;
+}
+
+.problem-list-clean > div{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:16px;
+  align-items:start;
+  padding:20px 0;
+  border-bottom:1px solid rgba(234,223,241,.95);
+}
+
+.problem-list-clean > div:last-child{
+  border-bottom:0;
+}
+
+.problem-list-clean span{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#fff1f7;
+  color:var(--pink-dark);
+  font-weight:900;
+}
+
+.problem-list-clean h3{
+  margin:0 0 5px;
+  font-size:1.22rem;
+}
+
+.problem-list-clean p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.62;
+}
+
+@media (max-width:900px){
+  .problem-layout{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+  .problem-copy{
+    text-align:center;
+  }
+  .problem-copy p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .trust-strip-clean{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* === FIXED FINAL HERO + PROBLEM === */
+
+/* Hide any old abstract images that may remain referenced */
+.hero-pro-image,
+.hero-main-image,
+.hero-preview-img{
+  display:none !important;
+}
+
+.hero-fixed{
+  padding:42px 0 24px !important;
+}
+
+.hero-fixed-shell{
+  padding:36px !important;
+  border-radius:34px !important;
+  overflow:hidden !important;
+}
+
+.hero-fixed-grid{
+  display:grid !important;
+  grid-template-columns:1.04fr .96fr !important;
+  gap:30px !important;
+  align-items:center !important;
+}
+
+.hero-fixed-copy h1{
+  max-width:12.5ch !important;
+  margin-bottom:16px !important;
+}
+
+.hero-fixed-copy .hero-text{
+  max-width:58ch !important;
+  margin-bottom:22px !important;
+}
+
+.hero-fixed-actions{
+  margin:0 0 18px !important;
+}
+
+.hero-fixed-actions .btn{
+  min-width:180px !important;
+}
+
+.hero-fixed-mini{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px !important;
+  margin-top:4px !important;
+}
+
+.hero-fixed-visual{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.hero-fixed-card{
+  width:100% !important;
+  max-width:560px !important;
+  margin:0 auto !important;
+}
+
+.trust-strip-fixed{
+  grid-template-columns:repeat(3,1fr) !important;
+  max-width:980px !important;
+  margin:20px auto 0 !important;
+}
+
+/* Problem section */
+.problem-fixed{
+  padding:62px 0 !important;
+  background:linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+
+.problem-fixed-head{
+  margin-bottom:32px !important;
+}
+
+.problem-fixed-head h2,
+.problem-fixed-head p{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.problem-fixed-head p{
+  max-width:760px !important;
+  color:var(--muted) !important;
+  line-height:1.7 !important;
+}
+
+.problem-fixed-layout{
+  display:grid !important;
+  grid-template-columns:.9fr 1.1fr !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+
+.problem-main{
+  background:linear-gradient(135deg,#fff1f7,#eef9ff) !important;
+  border:1px solid var(--line) !important;
+  border-radius:28px !important;
+  padding:30px !important;
+  box-shadow:0 14px 34px rgba(113,85,145,.08) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+}
+
+.problem-main h3{
+  margin:0 0 12px !important;
+  font-size:1.55rem !important;
+  line-height:1.25 !important;
+}
+
+.problem-main p{
+  margin:0 !important;
+  color:var(--muted) !important;
+  line-height:1.7 !important;
+}
+
+.problem-list{
+  display:grid !important;
+  gap:14px !important;
+}
+
+.problem-list > div{
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  border-radius:22px !important;
+  padding:20px 22px !important;
+  display:grid !important;
+  grid-template-columns:54px 1fr !important;
+  gap:16px !important;
+  align-items:start !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.025) !important;
+}
+
+.problem-list span{
+  width:46px !important;
+  height:46px !important;
+  border-radius:16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:#fff1f7 !important;
+  color:var(--pink-dark) !important;
+  font-weight:900 !important;
+  font-size:.95rem !important;
+}
+
+.problem-list h3{
+  margin:0 0 5px !important;
+  font-size:1.16rem !important;
+}
+
+.problem-list p{
+  margin:0 !important;
+  color:var(--muted) !important;
+  line-height:1.58 !important;
+}
+
+@media (max-width:980px){
+  .hero-fixed-grid,
+  .problem-fixed-layout{
+    grid-template-columns:1fr !important;
+  }
+  .hero-fixed-copy{
+    text-align:center !important;
+  }
+  .hero-fixed-copy h1,
+  .hero-fixed-copy .hero-text{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .hero-fixed-actions,
+  .hero-fixed-mini{
+    justify-content:center !important;
+  }
+  .trust-strip-fixed{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width:640px){
+  .hero-fixed-shell{
+    padding:22px !important;
+  }
+  .hero-fixed-copy h1{
+    max-width:none !important;
+  }
+}
+
+
+.problem-final .problem-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.problem-left{
+font-size:1.05rem;
+line-height:1.7;
+color:var(--muted);
+}
+
+.problem-right{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.problem-item{
+display:flex;
+gap:12px;
+align-items:center;
+padding:16px 18px;
+border:1px solid var(--line);
+border-radius:16px;
+background:#fff;
+}
+
+.problem-item span{
+font-size:18px;
+}
+
+@media(max-width:900px){
+.problem-final .problem-grid{
+grid-template-columns:1fr;
+}
+}
+
+.hero-fixed-grid{
+gap:50px !important;
+}
+
+.hero-fixed-copy{
+max-width:520px;
+}
+
+.hero-fixed-visual{
+justify-content:flex-end;
+}
+
+
+/* === CONVERSION OPTIMIZATION FINAL === */
+
+/* Problem section: scan fast, no wall of text */
+.problem-conversion{
+  padding:64px 0 !important;
+  background:linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+.problem-conversion .section-head{
+  margin-bottom:32px !important;
+}
+.problem-conversion .section-head h2{
+  max-width:980px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.problem-conversion-list{
+  max-width:920px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:8px 30px;
+  box-shadow:0 14px 34px rgba(113,85,145,.07);
+}
+.problem-conversion-row{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:16px;
+  align-items:start;
+  padding:24px 0;
+  border-bottom:1px solid rgba(234,223,241,.95);
+}
+.problem-conversion-row:last-child{
+  border-bottom:0;
+}
+.problem-conversion-row > span{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff1f7;
+  color:var(--pink-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:1.1rem;
+}
+.problem-conversion-row h3{
+  margin:0 0 6px;
+  font-size:1.22rem;
+}
+.problem-conversion-row p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.62;
+}
+.problem-closing{
+  max-width:760px;
+  margin:24px auto 0;
+  text-align:center;
+  padding:20px 24px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#fff1f7,#eef9ff);
+  border:1px solid var(--line);
+}
+.problem-closing strong{
+  display:block;
+  font-size:1.22rem;
+  margin-bottom:6px;
+}
+.problem-closing p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* Product cards: stronger buying cues */
+.conversion-badge{
+  display:inline-flex;
+  margin:2px 0 12px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:#fff1f7;
+  color:var(--pink-dark);
+  border:1px solid #ffd5e5;
+  font-weight:900;
+  font-size:.86rem;
+}
+.product-bottom .btn,
+.order-btn{
+  min-width:170px;
+}
+.product-note{
+  font-weight:700;
+}
+
+/* CTA section: centered and compact */
+.cta-section .cta-box,
+.cta-box{
+  text-align:center !important;
+}
+.cta-box{
+  align-items:center !important;
+}
+.cta-box p{
+  max-width:680px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Mobile comfort */
+@media (max-width:640px){
+  .problem-conversion-list{
+    padding:4px 18px;
+  }
+  .problem-conversion-row{
+    grid-template-columns:38px 1fr;
+    gap:12px;
+  }
+  .problem-conversion-row > span{
+    width:34px;
+    height:34px;
+  }
+}
+
+
+/* === LIMPIEZA FINAL DE CONVERSION === */
+
+/* Problem closing as text, not floating card */
+.problem-closing{
+  display:none !important;
+}
+.problem-closing-text{
+  text-align:center !important;
+  margin:28px auto 0 !important;
+  max-width:780px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+.problem-closing-text strong{
+  display:block !important;
+  font-size:1.28rem !important;
+  line-height:1.35 !important;
+  margin-bottom:6px !important;
+  color:var(--text) !important;
+}
+.problem-closing-text p{
+  margin:0 !important;
+  color:var(--muted) !important;
+  line-height:1.65 !important;
+}
+
+/* Audience centered and cleaner */
+.audience-section-pro{
+  background:#fff !important;
+}
+.audience-centered-head{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  max-width:760px !important;
+  margin-bottom:30px !important;
+}
+.audience-centered-head h2,
+.audience-centered-head p{
+  text-align:center !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.audience-centered-head p{
+  max-width:680px !important;
+  color:var(--muted) !important;
+  line-height:1.7 !important;
+}
+.audience-options-centered{
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:16px !important;
+  max-width:1080px !important;
+  margin:0 auto !important;
+}
+.audience-options-centered > div{
+  text-align:left !important;
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  border-radius:24px !important;
+  padding:24px !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.025) !important;
+}
+.audience-options-centered strong{
+  display:block !important;
+  font-size:1.22rem !important;
+  margin-bottom:4px !important;
+}
+.audience-options-centered span{
+  display:inline-flex !important;
+  color:var(--pink-dark) !important;
+  font-weight:900 !important;
+  margin-bottom:8px !important;
+}
+.audience-options-centered p{
+  margin:0 !important;
+  color:var(--muted) !important;
+  line-height:1.6 !important;
+}
+
+/* CTA consistency */
+.order-btn,
+.product-bottom .btn{
+  white-space:nowrap !important;
+}
+.product-note{
+  color:var(--muted) !important;
+}
+
+/* Remove leftover audience split image/card styles from older versions */
+.audience-copy,
+.audience-layout,
+.audience-main-card{
+  all:unset;
+}
+.audience-copy img,
+.audience-mini-image{
+  display:none !important;
+}
+
+@media (max-width:900px){
+  .audience-options-centered{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* === CTA + PROBLEM FINAL CLEANUP === */
+
+/* Make header actions visually distinct */
+.header-actions .btn-light{
+  min-width:140px;
+}
+.header-actions .btn-primary{
+  min-width:150px;
+}
+
+/* Problem subcopy belongs under title, not as a separate card */
+.problem-subcopy{
+  max-width:780px;
+  margin:14px auto 0 !important;
+  color:var(--muted);
+  line-height:1.65;
+  font-size:1.04rem;
+  text-align:center;
+}
+.problem-subcopy strong{
+  color:var(--text);
+  font-weight:900;
+}
+
+/* remove any old separate block if present */
+.problem-closing,
+.problem-closing-text{
+  display:none !important;
+}
+
+/* Softer product CTA naming */
+.order-btn,
+.product-bottom .btn{
+  min-width:160px;
+}
+
+/* Header/hero visual rhythm */
+.hero-actions .btn-primary{
+  min-width:180px;
+}
+
+
+/* === CAPA VISUAL PRO SIN ROMPER DISEÑO === */
+
+/* reflexión en normal, no en negrita */
+.problem-subcopy{
+  font-weight:500 !important;
+}
+.problem-subcopy strong{
+  font-weight:500 !important;
+}
+
+/* formas suaves de fondo */
+.hero-fixed-shell,
+.hero-shell,
+.packs-section,
+.audience-section-pro,
+.value-section-pro,
+.cta-section{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.hero-fixed-shell::before,
+.hero-shell::before{
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  right:-130px;
+  top:-110px;
+  background:radial-gradient(circle, rgba(255,111,174,.16), rgba(255,111,174,0) 66%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero-fixed-shell::after,
+.hero-shell::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  left:-120px;
+  bottom:-140px;
+  background:radial-gradient(circle, rgba(111,200,255,.14), rgba(111,200,255,0) 68%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero-fixed-grid,
+.hero-grid,
+.trust-strip,
+.trust-strip-fixed,
+.hero-copy,
+.hero-visual{
+  position:relative;
+  z-index:1;
+}
+
+.packs-section::before{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  left:-190px;
+  top:120px;
+  background:radial-gradient(circle, rgba(255,217,107,.13), rgba(255,217,107,0) 70%);
+  pointer-events:none;
+}
+
+.audience-section-pro::after{
+  content:"";
+  position:absolute;
+  width:360px;
+  height:360px;
+  right:-160px;
+  bottom:-120px;
+  background:radial-gradient(circle, rgba(111,200,255,.12), rgba(111,200,255,0) 70%);
+  pointer-events:none;
+}
+
+.value-section-pro::before,
+.cta-section::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  left:-120px;
+  top:-80px;
+  background:radial-gradient(circle, rgba(255,111,174,.10), rgba(255,111,174,0) 70%);
+  pointer-events:none;
+}
+
+/* iconos sutiles */
+.process-step-icon{
+  display:inline-flex;
+  width:40px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  border-radius:15px;
+  background:#fff7fb;
+  border:1px solid #f3dfea;
+  margin-bottom:10px;
+  font-size:1.12rem;
+}
+
+.audience-card-icon{
+  display:inline-flex !important;
+  width:42px;
+  height:42px;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:#fff1f7;
+  border:1px solid #ffd5e5;
+  margin-bottom:10px;
+  font-size:1.2rem;
+}
+
+.audience-options-centered strong,
+.audience-options strong{
+  display:block !important;
+}
+
+.product-visual-row{
+  display:flex;
+  gap:8px;
+  margin:4px 0 12px;
+}
+
+.product-visual-row span{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:#fff7fb;
+  border:1px solid #f0e2f2;
+  font-size:1rem;
+}
+
+.product-card,
+.process-step,
+.audience-options-centered > div,
+.benefits-compact > div,
+.hero-card{
+  box-shadow:0 14px 34px rgba(113,85,145,.07) !important;
+}
+
+
+/* === FINAL: textos centrados + imágenes de pack === */
+
+.benefits-compact > div,
+.audience-options-centered > div,
+.audience-options > div{
+  text-align:center !important;
+}
+
+.benefits-compact span,
+.audience-card-icon,
+.product-visual-row{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.audience-options-centered strong,
+.audience-options strong{
+  text-align:center !important;
+}
+
+.audience-options-centered p,
+.audience-options p,
+.benefits-compact p{
+  text-align:center !important;
+}
+
+/* imágenes realistas de cada pack */
+.pack-real-image{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:22px;
+  border:1px solid var(--line);
+  margin:0 0 16px;
+  box-shadow:0 14px 28px rgba(113,85,145,.08);
+}
+
+/* capa visual pro más visible pero suave */
+.section::before{
+  pointer-events:none;
+}
+
+.packs-section{
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255,217,107,.10), transparent 24%),
+    radial-gradient(circle at 92% 18%, rgba(111,200,255,.09), transparent 24%),
+    linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+
+.audience-section-pro{
+  background:
+    radial-gradient(circle at 85% 5%, rgba(255,111,174,.08), transparent 26%),
+    linear-gradient(180deg,#fff 0%,#fff 100%) !important;
+}
+
+.value-section-pro{
+  background:
+    radial-gradient(circle at 12% 0%, rgba(111,200,255,.10), transparent 24%),
+    radial-gradient(circle at 90% 80%, rgba(255,217,107,.10), transparent 26%),
+    #fff8fc !important;
+}
+
+/* reajuste de iconos para que parezcan intencionales */
+.audience-card-icon{
+  margin-bottom:14px !important;
+}
+
+.benefits-compact > div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+
+/* === CORRECCIÓN MOCKUPS: una sola imagen por pack === */
+.product-photo,
+.product-image{
+  display:none !important;
+}
+
+.pack-real-image{
+  display:block !important;
+  width:100% !important;
+  height:220px !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  border-radius:22px !important;
+  border:1px solid var(--line) !important;
+  margin:0 0 18px !important;
+  box-shadow:0 14px 28px rgba(113,85,145,.08) !important;
+}
+
+.product-card{
+  overflow:hidden;
+}
+
+@media (max-width:640px){
+  .pack-real-image{
+    height:190px !important;
+  }
+}
+
+
+/* === REPARACIÓN FINAL SIN ROMPER LA WEB === */
+
+/* Mockups: una sola imagen limpia por pack */
+.product-photo,
+.product-image{
+  display:none !important;
+}
+
+.pack-real-image{
+  display:block !important;
+  width:100% !important;
+  height:220px !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  border-radius:22px !important;
+  border:1px solid var(--line) !important;
+  margin:0 0 18px !important;
+  box-shadow:0 14px 28px rgba(113,85,145,.08) !important;
+}
+
+/* Más vendido: colocado dentro del pack destacado, sin pisar la etiqueta de edad */
+.product-card.featured{
+  position:relative !important;
+  padding-top:64px !important;
+  overflow:visible !important;
+  border-color:#ffc6dc !important;
+  box-shadow:0 20px 42px rgba(255,92,147,.14) !important;
+}
+
+.featured-badge{
+  position:absolute !important;
+  top:18px !important;
+  left:28px !important;
+  right:auto !important;
+  transform:none !important;
+  z-index:10 !important;
+  white-space:nowrap !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  box-shadow:0 10px 22px rgba(248,95,165,.24) !important;
+}
+
+/* Separación del bloque superior para que 3-6 años no choque con Más vendido */
+.product-card.featured .product-topline{
+  margin-top:0 !important;
+}
+
+/* Color por categoría sin cambiar estructura */
+#pack-guarderia{
+  border-top:4px solid #9bdcf7 !important;
+}
+
+#pack-infantil{
+  border-top:4px solid #f85fa5 !important;
+}
+
+#pack-completo{
+  border-top:4px solid #c8b5ff !important;
+}
+
+/* Capas suaves para que la web no se vea tan plana */
+.packs-section{
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255,217,107,.12), transparent 24%),
+    radial-gradient(circle at 92% 18%, rgba(111,200,255,.10), transparent 25%),
+    linear-gradient(180deg,#ffffff 0%,#fff8fc 100%) !important;
+}
+
+.product-card{
+  position:relative !important;
+  background:#fff !important;
+  box-shadow:0 14px 34px rgba(113,85,145,.07) !important;
+}
+
+.product-card::after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  right:-58px;
+  top:70px;
+  background:radial-gradient(circle, rgba(255,111,174,.09), transparent 68%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.product-card > *{
+  position:relative;
+  z-index:1;
+}
+
+/* Centrado suave de cajones informativos */
+.benefits-compact > div,
+.audience-options-centered > div,
+.audience-options > div{
+  text-align:center !important;
+}
+
+.benefits-compact span,
+.audience-card-icon,
+.product-visual-row{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+@media (max-width:640px){
+  .product-card.featured{
+    padding-top:66px !important;
+  }
+  .featured-badge{
+    top:18px !important;
+    left:20px !important;
+  }
+  .pack-real-image{
+    height:190px !important;
+  }
+}
+
+
+/* === FINAL BADGE + COLOR POLISH === */
+
+/* Reset previous absolute badge rules causing the label to stack badly */
+.product-card.featured{
+  padding-top:32px !important;
+  overflow:hidden !important;
+}
+
+.featured-badge.inline-badge,
+.product-card .featured-badge.inline-badge{
+  position:static !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin-left:10px !important;
+  transform:none !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  z-index:2 !important;
+  white-space:nowrap !important;
+  padding:9px 14px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  box-shadow:0 10px 22px rgba(248,95,165,.18) !important;
+}
+
+.product-card.featured .product-topline{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  margin-top:0 !important;
+}
+
+.product-card.featured .product-topline > div,
+.product-card.featured .product-topline .age-wrap{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  flex-wrap:wrap !important;
+}
+
+/* If top line does not have an internal wrapper, keep all chips aligned */
+.product-card.featured .product-topline > span{
+  vertical-align:middle !important;
+}
+
+/* More visible but still soft asymmetric background color */
+body{
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255,217,107,.18), transparent 24%),
+    radial-gradient(circle at 92% 12%, rgba(111,200,255,.16), transparent 26%),
+    radial-gradient(circle at 75% 78%, rgba(248,95,165,.10), transparent 26%),
+    linear-gradient(180deg,#fffafc 0%,#f8f4fb 100%) !important;
+}
+
+.visual-blob{
+  position:fixed;
+  pointer-events:none;
+  z-index:-1;
+  filter:blur(12px);
+  opacity:.75;
+  border-radius:999px;
+}
+
+.blob-one{
+  width:360px;
+  height:360px;
+  left:-120px;
+  top:220px;
+  background:radial-gradient(circle, rgba(255,217,107,.24), transparent 68%);
+}
+
+.blob-two{
+  width:420px;
+  height:420px;
+  right:-160px;
+  top:420px;
+  background:radial-gradient(circle, rgba(111,200,255,.20), transparent 70%);
+}
+
+.blob-three{
+  width:320px;
+  height:320px;
+  left:48%;
+  bottom:120px;
+  background:radial-gradient(circle, rgba(248,95,165,.14), transparent 70%);
+}
+
+.hero,
+.packs-section,
+.problem-section,
+.how-section-clean,
+.audience-section-pro,
+.value-section-pro,
+.cta-section{
+  position:relative !important;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  right:8%;
+  top:12%;
+  background:radial-gradient(circle, rgba(255,111,174,.12), transparent 70%);
+  pointer-events:none;
+}
+
+.problem-section::after{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  left:6%;
+  bottom:-80px;
+  background:radial-gradient(circle, rgba(111,200,255,.11), transparent 70%);
+  pointer-events:none;
+}
+
+@media (max-width:640px){
+  .featured-badge.inline-badge{
+    margin-left:0 !important;
+    margin-top:8px !important;
+  }
+  .product-card.featured .product-topline{
+    align-items:flex-start !important;
+  }
+}
+
+
+/* === ZIP FINAL: alineación badge + más color sin romper diseño === */
+
+/* Final badge: no flotante, integrado al lado de 3–6 años */
+.product-card.featured{
+  padding-top:32px !important;
+  overflow:hidden !important;
+}
+
+.product-topline-final{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:12px !important;
+  margin-top:0 !important;
+  margin-bottom:18px !important;
+}
+
+.topline-left{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  flex-wrap:wrap !important;
+}
+
+.age-pill,
+.age-pill-infantil{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:9px 14px !important;
+  border-radius:999px !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.age-pill-infantil{
+  background:#ffe68e !important;
+  color:#74570a !important;
+}
+
+.featured-badge,
+.featured-badge.inline-badge{
+  display:none !important;
+}
+
+.featured-badge-inline{
+  position:static !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:9px 14px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 10px 22px rgba(248,95,165,.22) !important;
+}
+
+.product-label{
+  font-weight:900 !important;
+  color:var(--muted) !important;
+  font-size:1.05rem !important;
+}
+
+/* Más color global con manchas suaves */
+body{
+  background:
+    radial-gradient(circle at 10% 18%, rgba(255,95,162,.13), transparent 24%),
+    radial-gradient(circle at 88% 18%, rgba(111,200,255,.15), transparent 26%),
+    radial-gradient(circle at 62% 78%, rgba(255,217,107,.13), transparent 26%),
+    linear-gradient(180deg,#fffafc 0%,#f8f4fb 100%) !important;
+}
+
+.packs-section{
+  background:
+    radial-gradient(circle at 6% 18%, rgba(255,217,107,.18), transparent 25%),
+    radial-gradient(circle at 92% 12%, rgba(111,200,255,.14), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(248,95,165,.10), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+
+/* Acentos por pack más visibles */
+#pack-guarderia{
+  border-top:5px solid #8bd8f7 !important;
+  box-shadow:0 16px 36px rgba(139,216,247,.16) !important;
+}
+
+#pack-infantil{
+  border-top:5px solid #f85fa5 !important;
+  box-shadow:0 20px 44px rgba(248,95,165,.16) !important;
+}
+
+#pack-completo{
+  border-top:5px solid #c7adff !important;
+  box-shadow:0 16px 36px rgba(199,173,255,.16) !important;
+}
+
+/* más vida visual en cards sin añadir ruido */
+.product-card::after{
+  content:"";
+  position:absolute;
+  width:160px;
+  height:160px;
+  right:-58px;
+  top:84px;
+  background:radial-gradient(circle, rgba(255,111,174,.11), transparent 68%);
+  pointer-events:none;
+  z-index:0;
+}
+
+#pack-guarderia::after{
+  background:radial-gradient(circle, rgba(139,216,247,.16), transparent 68%);
+}
+#pack-infantil::after{
+  background:radial-gradient(circle, rgba(248,95,165,.14), transparent 68%);
+}
+#pack-completo::after{
+  background:radial-gradient(circle, rgba(199,173,255,.16), transparent 68%);
+}
+
+.product-card > *{
+  position:relative;
+  z-index:1;
+}
+
+@media (max-width:640px){
+  .product-topline-final{
+    align-items:flex-start !important;
+  }
+  .featured-badge-inline,
+  .age-pill-infantil{
+    font-size:.92rem !important;
+  }
+}
+
+
+/* === NIVEL PRO FINAL: badge infantil exacto === */
+
+/* Card destacado: permite que Más vendido sobresalga como en la referencia */
+#pack-infantil.product-card.featured{
+  position:relative !important;
+  overflow:visible !important;
+  padding-top:40px !important;
+}
+
+/* Oculta cualquier badge antiguo/inline que haya quedado por cascada */
+#pack-infantil .featured-badge:not(.featured-badge-floating),
+#pack-infantil .featured-badge-inline,
+#pack-infantil .inline-badge{
+  display:none !important;
+}
+
+/* Más vendido flotante, arriba a la izquierda, como en tu pantallazo */
+#pack-infantil .featured-badge-floating{
+  position:absolute !important;
+  top:-16px !important;
+  left:28px !important;
+  z-index:20 !important;
+
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+
+  padding:12px 18px !important;
+  border-radius:999px !important;
+  box-shadow:0 12px 24px rgba(248,95,165,.26) !important;
+  white-space:nowrap !important;
+}
+
+/* Top line limpia: 3-6 años alineado con los otros packs y label Infantil a la derecha */
+#pack-infantil .product-topline-pro{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+  margin-top:0 !important;
+  margin-bottom:18px !important;
+}
+
+/* Pill 3-6 años debajo del badge, alineado como 0-3 y 6-8 */
+#pack-infantil .age-pill-infantil{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  background:#ffe68e !important;
+  color:#74570a !important;
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+/* Label Infantil */
+#pack-infantil .product-label{
+  font-weight:900 !important;
+  color:var(--muted) !important;
+  font-size:1.05rem !important;
+}
+
+/* Micro efecto pro, sin ser llamativo */
+#pack-infantil .featured-badge-floating{
+  transition:transform .18s ease, box-shadow .18s ease !important;
+}
+#pack-infantil:hover .featured-badge-floating{
+  transform:translateY(-1px) !important;
+  box-shadow:0 16px 30px rgba(248,95,165,.32) !important;
+}
+
+/* Más color suave global sin romper diseño */
+body{
+  background:
+    radial-gradient(circle at 8% 16%, rgba(255,217,107,.16), transparent 24%),
+    radial-gradient(circle at 92% 18%, rgba(111,200,255,.16), transparent 26%),
+    radial-gradient(circle at 55% 82%, rgba(248,95,165,.12), transparent 28%),
+    linear-gradient(180deg,#fffafc 0%,#f8f4fb 100%) !important;
+}
+
+@media (max-width:640px){
+  #pack-infantil.product-card.featured{
+    padding-top:44px !important;
+  }
+  #pack-infantil .featured-badge-floating{
+    top:-14px !important;
+    left:20px !important;
+    font-size:.92rem !important;
+    padding:10px 15px !important;
+  }
+}
+
+
+/* =========================================================
+   PACKS SECTION - FINAL CLEAN REPAIR
+   This block intentionally overrides previous badge/card rules.
+   ========================================================= */
+
+.packs-section{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255,217,107,.15), transparent 24%),
+    radial-gradient(circle at 92% 14%, rgba(111,200,255,.13), transparent 25%),
+    radial-gradient(circle at 55% 92%, rgba(248,95,165,.10), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+
+.products-grid,
+.pack-grid,
+.products{
+  align-items:stretch !important;
+}
+
+/* Stable card sizing */
+.product-card{
+  position:relative !important;
+  overflow:visible !important;
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  border-radius:30px !important;
+  box-shadow:0 16px 36px rgba(113,85,145,.07) !important;
+}
+
+/* Remove conflicting old top badge behavior */
+.product-card .featured-badge,
+.product-card .featured-badge-inline,
+.product-card .inline-badge{
+  display:none !important;
+}
+
+/* Give featured card room for the floating badge, but keep card content aligned */
+#pack-infantil.product-card.featured{
+  padding-top:52px !important;
+  border-color:#ffc6dc !important;
+  box-shadow:0 22px 46px rgba(248,95,165,.16) !important;
+}
+
+/* Top line identical across cards */
+.product-topline-clean{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+  margin:0 0 18px !important;
+  min-height:48px !important;
+}
+
+.age-pill{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.age-pill-guarderia{
+  background:#d8f2ff !important;
+  color:#23749d !important;
+}
+.age-pill-infantil{
+  background:#ffe68e !important;
+  color:#74570a !important;
+}
+.age-pill-cole{
+  background:#dfd0ff !important;
+  color:#6543b6 !important;
+}
+
+.product-label{
+  font-weight:900 !important;
+  color:var(--muted) !important;
+  font-size:1.05rem !important;
+  white-space:nowrap !important;
+}
+
+/* Floating badge exactly above the 3–6 pill */
+#pack-infantil .featured-badge-floating{
+  position:absolute !important;
+  top:18px !important;
+  left:30px !important;
+  z-index:20 !important;
+
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  padding:10px 18px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 12px 24px rgba(248,95,165,.26) !important;
+}
+
+/* Images: one clear product mockup, no double frames */
+.product-photo,
+.product-image{
+  display:none !important;
+}
+
+.pack-real-image{
+  display:block !important;
+  width:100% !important;
+  height:210px !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  border-radius:22px !important;
+  border:1px solid var(--line) !important;
+  margin:0 0 18px !important;
+  box-shadow:0 14px 28px rgba(113,85,145,.08) !important;
+}
+
+/* Category accent */
+#pack-guarderia{ border-top:5px solid #8bd8f7 !important; }
+#pack-infantil{ border-top:5px solid #f85fa5 !important; }
+#pack-completo{ border-top:5px solid #c7adff !important; }
+
+/* Keep decorative glow inside but behind content */
+.product-card::after{
+  content:"" !important;
+  position:absolute !important;
+  width:160px !important;
+  height:160px !important;
+  right:-58px !important;
+  top:84px !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+#pack-guarderia::after{ background:radial-gradient(circle, rgba(139,216,247,.15), transparent 68%) !important; }
+#pack-infantil::after{ background:radial-gradient(circle, rgba(248,95,165,.13), transparent 68%) !important; }
+#pack-completo::after{ background:radial-gradient(circle, rgba(199,173,255,.15), transparent 68%) !important; }
+
+.product-card > *{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+@media (max-width:900px){
+  #pack-infantil.product-card.featured{
+    padding-top:54px !important;
+  }
+  .pack-real-image{
+    height:190px !important;
+  }
+}
+
+@media (max-width:640px){
+  .product-topline-clean{
+    min-height:auto !important;
+  }
+  #pack-infantil .featured-badge-floating{
+    top:18px !important;
+    left:22px !important;
+    font-size:.92rem !important;
+    padding:9px 15px !important;
+  }
+}
+
+
+/* =========================================================
+   FIX DEFINITIVO SECCIÓN PACKS
+   ========================================================= */
+
+.packs-section{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255,217,107,.16), transparent 24%),
+    radial-gradient(circle at 92% 14%, rgba(111,200,255,.14), transparent 25%),
+    radial-gradient(circle at 55% 92%, rgba(248,95,165,.10), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+}
+
+.product-card{
+  position:relative !important;
+  overflow:visible !important;
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  border-radius:30px !important;
+  box-shadow:0 16px 36px rgba(113,85,145,.07) !important;
+}
+
+#pack-infantil.product-card.featured{
+  padding-top:52px !important;
+  border-color:#ffc6dc !important;
+  box-shadow:0 22px 46px rgba(248,95,165,.16) !important;
+}
+
+.product-card .featured-badge,
+.product-card .featured-badge-inline,
+.product-card .inline-badge{
+  display:none !important;
+}
+
+#pack-infantil .featured-badge-floating{
+  position:absolute !important;
+  top:18px !important;
+  left:30px !important;
+  z-index:20 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px 18px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 12px 24px rgba(248,95,165,.26) !important;
+}
+
+.product-topline-clean{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+  margin:0 0 18px !important;
+  min-height:48px !important;
+}
+
+.age-pill{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.age-pill-guarderia{ background:#d8f2ff !important; color:#23749d !important; }
+.age-pill-infantil{ background:#ffe68e !important; color:#74570a !important; }
+.age-pill-cole{ background:#dfd0ff !important; color:#6543b6 !important; }
+
+.product-label{
+  font-weight:900 !important;
+  color:var(--muted) !important;
+  font-size:1.05rem !important;
+  white-space:nowrap !important;
+}
+
+.product-photo,
+.product-image{
+  display:none !important;
+}
+
+.pack-real-image{
+  display:block !important;
+  width:100% !important;
+  height:210px !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  border-radius:22px !important;
+  border:1px solid var(--line) !important;
+  margin:0 0 18px !important;
+  box-shadow:0 14px 28px rgba(113,85,145,.08) !important;
+}
+
+#pack-guarderia{ border-top:5px solid #8bd8f7 !important; }
+#pack-infantil{ border-top:5px solid #f85fa5 !important; }
+#pack-completo{ border-top:5px solid #c7adff !important; }
+
+.product-card::after{
+  content:"" !important;
+  position:absolute !important;
+  width:160px !important;
+  height:160px !important;
+  right:-58px !important;
+  top:84px !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+#pack-guarderia::after{ background:radial-gradient(circle, rgba(139,216,247,.15), transparent 68%) !important; }
+#pack-infantil::after{ background:radial-gradient(circle, rgba(248,95,165,.13), transparent 68%) !important; }
+#pack-completo::after{ background:radial-gradient(circle, rgba(199,173,255,.15), transparent 68%) !important; }
+
+.product-card > *{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+@media (max-width:900px){
+  #pack-infantil.product-card.featured{ padding-top:54px !important; }
+  .pack-real-image{ height:190px !important; }
+}
+
+@media (max-width:640px){
+  #pack-infantil .featured-badge-floating{
+    top:18px !important;
+    left:22px !important;
+    font-size:.92rem !important;
+    padding:9px 15px !important;
+  }
+}
+
+
+/* === AJUSTE FINAL EXACTO: MÁS VENDIDO + 3-6 AÑOS === */
+
+/* Card infantil: badge flotante arriba, edad debajo, como la referencia */
+#pack-infantil.product-card.featured{
+  position:relative !important;
+  overflow:visible !important;
+  padding-top:58px !important;
+  border:2px solid #ffc1da !important;
+  border-top:5px solid #f85fa5 !important;
+  box-shadow:0 24px 54px rgba(248,95,165,.20) !important;
+}
+
+/* Eliminar cualquier variante antigua */
+#pack-infantil .featured-badge,
+#pack-infantil .featured-badge-inline,
+#pack-infantil .inline-badge{
+  display:none !important;
+}
+
+/* Más vendido EXACTO: sobresale arriba a la izquierda */
+#pack-infantil .featured-badge-floating{
+  position:absolute !important;
+  top:-19px !important;
+  left:28px !important;
+  z-index:50 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:13px 22px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1.02rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 28px rgba(248,95,165,.30) !important;
+}
+
+/* Línea superior: 3-6 a la izquierda, Infantil a la derecha */
+#pack-infantil .product-topline-clean{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+  margin:0 0 18px !important;
+  min-height:48px !important;
+}
+
+#pack-infantil .age-pill-infantil{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:11px 17px !important;
+  border-radius:999px !important;
+  background:#ffe28a !important;
+  color:#74570a !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 8px 18px rgba(255,206,72,.22) !important;
+}
+
+#pack-infantil .product-label{
+  font-weight:900 !important;
+  color:#766b80 !important;
+  font-size:1.08rem !important;
+  white-space:nowrap !important;
+}
+
+/* Más fuerza de color general sin romper diseño */
+body{
+  background:
+    radial-gradient(circle at 7% 14%, rgba(255,206,72,.24), transparent 24%),
+    radial-gradient(circle at 92% 16%, rgba(83,190,255,.20), transparent 26%),
+    radial-gradient(circle at 60% 86%, rgba(248,95,165,.16), transparent 30%),
+    linear-gradient(180deg,#fff8fb 0%,#f7f1fb 100%) !important;
+}
+
+.packs-section{
+  background:
+    radial-gradient(circle at 5% 12%, rgba(255,206,72,.22), transparent 25%),
+    radial-gradient(circle at 92% 18%, rgba(83,190,255,.18), transparent 25%),
+    radial-gradient(circle at 48% 104%, rgba(248,95,165,.14), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fff5fb 100%) !important;
+}
+
+/* Acentos más vivos por pack */
+#pack-guarderia{
+  border-top:5px solid #68cffa !important;
+  box-shadow:0 18px 42px rgba(104,207,250,.18) !important;
+}
+
+#pack-completo{
+  border-top:5px solid #b795ff !important;
+  box-shadow:0 18px 42px rgba(183,149,255,.18) !important;
+}
+
+/* Pills de edad un poco más vivas */
+.age-pill-guarderia{
+  background:#c9efff !important;
+  color:#126f9f !important;
+}
+
+.age-pill-cole{
+  background:#d8c5ff !important;
+  color:#5c37b4 !important;
+}
+
+/* Blobs internos más visibles */
+#pack-guarderia::after{
+  background:radial-gradient(circle, rgba(104,207,250,.22), transparent 68%) !important;
+}
+#pack-infantil::after{
+  background:radial-gradient(circle, rgba(248,95,165,.20), transparent 68%) !important;
+}
+#pack-completo::after{
+  background:radial-gradient(circle, rgba(183,149,255,.22), transparent 68%) !important;
+}
+
+@media (max-width:640px){
+  #pack-infantil.product-card.featured{
+    padding-top:58px !important;
+  }
+  #pack-infantil .featured-badge-floating{
+    top:-17px !important;
+    left:22px !important;
+    padding:11px 17px !important;
+    font-size:.94rem !important;
+  }
+}
+
+
+/* === AJUSTE FINAL DE ALINEACIÓN === */
+
+/* Asegurar que TODAS las cards usan misma referencia */
+.product-topline-clean{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  margin:0 0 18px !important;
+  min-height:48px !important;
+}
+
+/* Igualar vertical exacto en infantil */
+#pack-infantil .product-topline-clean{
+  margin-top:6px !important; /* compensa badge */
+}
+
+/* Mover ligeramente "Más vendido" a la derecha para no interferir */
+#pack-infantil .featured-badge-floating{
+  left:44px !important;   /* antes 28px */
+  top:-18px !important;
+}
+
+/* Asegurar que pills quedan alineadas visualmente */
+.age-pill{
+  height:38px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+}
+
+/* Ajuste fino texto derecha (Infantil / Guardería / Cole) */
+.product-label{
+  display:flex !important;
+  align-items:center !important;
+  height:38px !important;
+}
+
+/* Evitar salto visual por badge */
+#pack-infantil.product-card.featured{
+  padding-top:54px !important;
+}
+
+
+/* === FIX REAL DE ALINEACIÓN (FORZADO) === */
+
+/* quitar compensaciones anteriores */
+#pack-infantil .product-topline-clean{
+  margin-top:0 !important;
+}
+
+/* forzar MISMA altura visual en las 3 cards */
+.product-topline-clean{
+  height:48px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
+
+/* mover el badge más a la derecha para que no afecte */
+#pack-infantil .featured-badge-floating{
+  left:70px !important;  /* antes 44 */
+  top:-20px !important;
+}
+
+/* asegurar alineación perfecta de textos */
+.age-pill{
+  line-height:1 !important;
+  display:flex !important;
+  align-items:center !important;
+}
+
+.product-label{
+  display:flex !important;
+  align-items:center !important;
+  line-height:1 !important;
+}
+
+/* eliminar cualquier offset vertical residual */
+#pack-infantil.product-card.featured{
+  padding-top:48px !important;
+}
+
+
+/* =========================================================
+   PACKS: ALINEACIÓN REAL DEFINITIVA
+   ========================================================= */
+
+/* Igualamos el padding superior en TODAS las cards.
+   El badge flota fuera del flujo y ya no empuja el contenido. */
+#pack-guarderia.product-card,
+#pack-infantil.product-card,
+#pack-completo.product-card{
+  padding-top:32px !important;
+  overflow:visible !important;
+}
+
+/* El destacado puede tener borde/sombra, pero NO más padding */
+#pack-infantil.product-card.featured{
+  padding-top:32px !important;
+  border:2px solid #ffc1da !important;
+  border-top:5px solid #f85fa5 !important;
+  box-shadow:0 24px 54px rgba(248,95,165,.20) !important;
+}
+
+/* Topline idéntico en las 3 */
+.product-topline-final{
+  height:48px !important;
+  min-height:48px !important;
+  margin:0 0 18px !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:14px !important;
+}
+
+/* Pills con misma caja visual */
+.age-pill{
+  height:38px !important;
+  padding:0 16px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:999px !important;
+  font-weight:900 !important;
+  font-size:1rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.age-pill-guarderia{
+  background:#c9efff !important;
+  color:#126f9f !important;
+}
+
+.age-pill-infantil{
+  background:#ffe28a !important;
+  color:#74570a !important;
+  box-shadow:0 8px 18px rgba(255,206,72,.22) !important;
+}
+
+.age-pill-cole{
+  background:#d8c5ff !important;
+  color:#5c37b4 !important;
+}
+
+/* Labels con misma caja visual que pills */
+.product-label{
+  height:38px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-weight:900 !important;
+  color:#766b80 !important;
+  font-size:1.08rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+/* El badge no afecta layout. Lo movemos más a la derecha para no pisar la línea. */
+#pack-infantil .featured-badge-floating{
+  position:absolute !important;
+  top:-22px !important;
+  left:74px !important;
+  z-index:50 !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  height:44px !important;
+  padding:0 24px !important;
+  border-radius:999px !important;
+  background:#f85fa5 !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:1.02rem !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+  box-shadow:0 14px 28px rgba(248,95,165,.30) !important;
+}
+
+/* Oculta variantes antiguas por si quedaron en cascada */
+.product-card .featured-badge,
+.product-card .featured-badge-inline,
+.product-card .inline-badge{
+  display:none !important;
+}
+
+/* Imágenes debajo de cabecera, sin compensaciones raras */
+.pack-real-image{
+  margin-top:0 !important;
+}
+
+/* Más color sin romper estructura */
+body{
+  background:
+    radial-gradient(circle at 7% 14%, rgba(255,206,72,.24), transparent 24%),
+    radial-gradient(circle at 92% 16%, rgba(83,190,255,.20), transparent 26%),
+    radial-gradient(circle at 60% 86%, rgba(248,95,165,.16), transparent 30%),
+    linear-gradient(180deg,#fff8fb 0%,#f7f1fb 100%) !important;
+}
+
+.packs-section{
+  background:
+    radial-gradient(circle at 5% 12%, rgba(255,206,72,.22), transparent 25%),
+    radial-gradient(circle at 92% 18%, rgba(83,190,255,.18), transparent 25%),
+    radial-gradient(circle at 48% 104%, rgba(248,95,165,.14), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fff5fb 100%) !important;
+}
+
+@media (max-width:640px){
+  #pack-infantil .featured-badge-floating{
+    top:-20px !important;
+    left:52px !important;
+    height:40px !important;
+    padding:0 18px !important;
+    font-size:.94rem !important;
+  }
+}

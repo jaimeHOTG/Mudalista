@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="visual-blob blob-one"></div>
+  <div class="visual-blob blob-two"></div>
+  <div class="visual-blob blob-three"></div>
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="brand">MudaLista</a>
@@ -25,7 +28,7 @@
 
       <div class="header-actions">
         <a href="#packs" class="btn btn-light">Ver packs</a>
-        <a href="#packs" class="btn btn-primary">Comprar ahora</a>
+        <a href="#packs" class="btn btn-primary">Pedir mi pack</a>
       </div>
 
       <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
@@ -39,15 +42,15 @@
       <a href="#para-quien">Para quién</a>
       <a href="#faq">FAQ</a>
       <a href="#footer-contacto">Contacto</a>
-      <a href="#packs" class="btn btn-primary mobile-cta">Comprar ahora</a>
+      <a href="#packs" class="btn btn-primary mobile-cta">Pedir mi pack</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-shell">
-        <div class="hero-grid">
-          <div class="hero-copy">
+    <section class="hero hero-fixed">
+      <div class="container hero-shell hero-fixed-shell">
+        <div class="hero-grid hero-fixed-grid">
+          <div class="hero-copy hero-fixed-copy">
             <div class="eyebrow">Muda lista para guardería y cole</div>
             <h1>Compra el pack ideal y deja <span>la semana resuelta</span></h1>
             <p class="hero-text">
@@ -55,88 +58,95 @@
               y compra asistida paso a paso. Más claridad, más confianza y menos olvidos.
             </p>
 
-            <div class="hero-points">
-              <div class="point-card">
-                <strong>Compra simple</strong>
-                <span>Eliges pack, talla, temporada y estilo</span>
-              </div>
-              <div class="point-card">
-                <strong>Confirmación rápida</strong>
-                <span>Te guiamos en el pedido y pago</span>
-              </div>
-              <div class="point-card">
-                <strong>Más confianza</strong>
-                <span>Proceso claro antes de finalizar</span>
-              </div>
+            <div class="hero-actions hero-fixed-actions">
+              <a href="#packs" class="btn btn-primary">Ver packs</a>
             </div>
 
-            <div class="hero-actions">
-              <a href="#packs" class="btn btn-primary">Comprar ahora</a>
-              <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
-            </div>
-
-            <div class="hero-mini">
-              <span>Ideal para guardería, infantil y primeros cursos</span>
+            <div class="hero-mini hero-fixed-mini">
+              <span>Ideal para guardería, infantil y cole</span>
               <span>Bolsa personalizada incluida</span>
             </div>
           </div>
 
-          <div class="hero-visual">
-            <div class="hero-card">
+          <div class="hero-visual hero-fixed-visual">
+            <div class="hero-card hero-fixed-card">
               <div class="hero-badge">Más vendido</div>
               <h3>Pack Infantil</h3>
               <p>La opción más equilibrada para cubrir la semana del cole de forma simple y sin improvisar.</p>
 
               <div class="hero-stats">
-                <div class="stat-box"><strong>5</strong><span>días cubiertos</span></div>
-                <div class="stat-box"><strong>3</strong><span>pantalones</span></div>
-                <div class="stat-box"><strong>3</strong><span>camisetas</span></div>
-                <div class="stat-box"><strong>5</strong><span>interiores</span></div>
+                <div class="stat-box">
+                  <strong>5</strong>
+                  <span>días cubiertos</span>
+                </div>
+                <div class="stat-box">
+                  <strong>3</strong>
+                  <span>pantalones</span>
+                </div>
+                <div class="stat-box">
+                  <strong>3</strong>
+                  <span>camisetas</span>
+                </div>
+                <div class="stat-box">
+                  <strong>5</strong>
+                  <span>interiores</span>
+                </div>
               </div>
 
               <div class="hero-card-bottom">
                 <div>
                   <small>Desde</small>
-                  <div class="hero-price">44,90 €</div>
+                  <div class="hero-price">39,90 €</div>
                 </div>
-                <a href="#pack-infantil" class="btn btn-primary">Comprar ahora</a>
+                <a href="#pack-infantil" class="btn btn-primary">Pedir mi pack</a>
               </div>
-              <p class="hero-card-note">Confirmación por WhatsApp y pago seguro mediante Bizum o enlace de pago.</p>
+              <p class="hero-card-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
             </div>
           </div>
         </div>
 
-        <div class="trust-strip">
+        <div class="trust-strip trust-strip-fixed">
           <div>🎒 Todo listo para la mochila</div>
           <div>🧵 Personalizado con nombre</div>
           <div>🎨 3 estilos para elegir</div>
-          <div>💛 Proceso de compra guiado</div>
         </div>
       </div>
     </section>
 
-    <section class="section problem-section">
+    <section class="section problem-section problem-conversion">
       <div class="container">
         <div class="section-head center narrow">
           <span class="section-tag">El problema</span>
           <h2>Esto no va de vender ropa. Va de quitarte un problema diario.</h2>
+          <p class="problem-subcopy">La realidad: no es falta de ropa. Es falta de sistema.<br>Por eso hemos creado packs pensados para cubrir la semana sin improvisar.</p>
         </div>
 
-        <div class="problem-grid">
-          <div class="problem-card">
-            <h3>Te piden muda y siempre falta algo</h3>
-            <p>No sabes exactamente qué meter, improvisas y muchas veces la bolsa queda incompleta.</p>
+        <div class="problem-conversion-list">
+          <div class="problem-conversion-row">
+            <span>✕</span>
+            <div>
+              <h3>Siempre falta algo</h3>
+              <p>No sabes exactamente qué meter y la bolsa acaba incompleta.</p>
+            </div>
           </div>
-          <div class="problem-card">
-            <h3>Todo acaba desordenado</h3>
-            <p>Prendas sueltas, bolsas distintas y la sensación de que cada semana hay que empezar de nuevo.</p>
+
+          <div class="problem-conversion-row">
+            <span>✕</span>
+            <div>
+              <h3>Todo acaba desordenado</h3>
+              <p>Prendas sueltas, bolsas distintas y cada semana empiezas de cero.</p>
+            </div>
           </div>
-          <div class="problem-card">
-            <h3>Acabas perdiendo tiempo</h3>
-            <p>El objetivo real es tenerlo resuelto una vez y dejar de pensar en ello cada mañana.</p>
+
+          <div class="problem-conversion-row">
+            <span>✕</span>
+            <div>
+              <h3>Pierdes tiempo</h3>
+              <p>Es una tarea más cada mañana que deberías tener resuelta.</p>
+            </div>
           </div>
         </div>
-      </div>
+</div>
     </section>
 
     <section class="section packs-section" id="packs">
@@ -149,13 +159,14 @@
 
         <div class="products-grid">
           <article class="product-card" id="pack-guarderia">
-            <div class="product-topline">
-              <span class="product-chip chip-blue">0–3 años</span>
-              <span class="product-rating">Guardería</span>
+            <div class="product-topline product-topline-final">
+              <span class="age-pill age-pill-guarderia">0–3 años</span>
+              <span class="product-label">Guardería</span>
             </div>
-            <img class="product-photo" id="photo-guarderia" src="assets/guarderia_pv_basico.jpg" alt="Mockup Pack Guardería">
-            <h3>Pack Guardería</h3>
-            <p class="product-subtitle">Pensado para <strong>3-4 cambios completos</strong> y para peques con más necesidad de recambio.</p>
+<img class="pack-real-image" src="assets/pack_guarderia_realista.jpg" alt="Mockup realista del Pack Guardería con ropa y bolsa personalizada">
+<h3>Pack Guardería</h3>
+            <div class="conversion-badge">Ideal para cambios frecuentes</div>
+            <p class="product-subtitle">Para bebés y peques que necesitan <strong>recambios preparados</strong> sin improvisar.</p>
 
             <ul class="product-list">
               <li>4 bodys</li>
@@ -165,6 +176,7 @@
               <li>1 bolsa personalizada con nombre</li>
             </ul>
 
+            <div class="product-visual-row"><span>👕</span><span>👖</span><span>🎒</span></div>
             <div class="product-meta">
               <span>3-4 cambios</span>
               <span>Cambios frecuentes</span>
@@ -176,9 +188,10 @@
 
               <label>Talla</label>
               <select id="size-guarderia">
+                <option>0-6 meses</option>
+                <option>6-12 meses</option>
                 <option>12-18 meses</option>
                 <option>18-24 meses</option>
-                <option>2-3 años</option>
               </select>
 
               <label>Temporada</label>
@@ -199,7 +212,7 @@
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+6€)" data-pack="guarderia"> Pack calcetines (+6€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+8€)" data-pack="guarderia"> Segunda bolsa personalizada (+8€)</label>
-                <label class="check-option"><input type="checkbox" id="second-name-guarderia" value="Segundo nombre o apellido en bolsa (+10€)" data-pack="guarderia" data-toggle-target="second-name-field-guarderia"> Segundo nombre o apellido en bolsa (+10€)</label>
+                <label class="check-option"><input type="checkbox" id="second-name-guarderia" value="Segundo nombre o apellido en bolsa (+4€)" data-pack="guarderia" data-toggle-target="second-name-field-guarderia"> Segundo nombre o apellido en bolsa (+4€)</label>
                 <div class="extra-field" id="second-name-field-guarderia">
                   <label>Segundo nombre / apellido para la bolsa</label>
                   <input type="text" id="second-name-value-guarderia" placeholder="Ej. Martín">
@@ -212,20 +225,21 @@
                 <small>Precio</small>
                 <div class="price">39,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Guardería" data-name-id="name-guarderia" data-size-id="size-guarderia" data-season-id="season-guarderia" data-style-id="style-guarderia" data-base-price="39,90 €" data-pack-key="guarderia">Comprar ahora</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Guardería" data-name-id="name-guarderia" data-size-id="size-guarderia" data-season-id="season-guarderia" data-style-id="style-guarderia" data-base-price="39,90 €" data-pack-key="guarderia">Pedir mi pack</button>
             </div>
-            <p class="product-note">Confirmación por WhatsApp y pago seguro mediante Bizum o enlace de pago.</p>
+            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
           </article>
 
           <article class="product-card featured" id="pack-infantil">
-            <div class="featured-badge">Más vendido</div>
-            <div class="product-topline">
-              <span class="product-chip chip-yellow">3–6 años</span>
-              <span class="product-rating">Infantil</span>
+            <span class="featured-badge-floating">Más vendido</span>
+            <div class="product-topline product-topline-final">
+              <span class="age-pill age-pill-infantil">3–6 años</span>
+              <span class="product-label">Infantil</span>
             </div>
-            <img class="product-photo" id="photo-infantil" src="assets/infantil_pv_basico.jpg" alt="Mockup Pack Infantil">
-            <h3>Pack Infantil</h3>
-            <p class="product-subtitle">Pensado para <strong>cubrir la semana del cole</strong> con lo esencial y sin añadir nada más.</p>
+<img class="pack-real-image" src="assets/pack_infantil_realista.jpg" alt="Mockup realista del Pack Infantil con ropa y bolsa personalizada">
+<h3>Pack Infantil</h3>
+            <div class="conversion-badge">Pack más equilibrado</div>
+            <p class="product-subtitle">El pack más equilibrado para <strong>cubrir la semana</strong> con lo esencial.</p>
 
             <ul class="product-list">
               <li>3 pantalones</li>
@@ -235,6 +249,7 @@
               <li>1 bolsa personalizada con nombre</li>
             </ul>
 
+            <div class="product-visual-row"><span>👕</span><span>👖</span><span>🎒</span></div>
             <div class="product-meta">
               <span>5 días cubiertos</span>
               <span>El más elegido</span>
@@ -249,7 +264,6 @@
                 <option>2-3 años</option>
                 <option>3-4 años</option>
                 <option>4-5 años</option>
-                <option>5-6 años</option>
               </select>
 
               <label>Temporada</label>
@@ -270,7 +284,7 @@
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+6€)" data-pack="infantil"> Pack calcetines (+6€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+8€)" data-pack="infantil"> Segunda bolsa personalizada (+8€)</label>
-                <label class="check-option"><input type="checkbox" id="second-name-infantil" value="Segundo nombre o apellido en bolsa (+10€)" data-pack="infantil" data-toggle-target="second-name-field-infantil"> Segundo nombre o apellido en bolsa (+10€)</label>
+                <label class="check-option"><input type="checkbox" id="second-name-infantil" value="Segundo nombre o apellido en bolsa (+4€)" data-pack="infantil" data-toggle-target="second-name-field-infantil"> Segundo nombre o apellido en bolsa (+4€)</label>
                 <div class="extra-field" id="second-name-field-infantil">
                   <label>Segundo nombre / apellido para la bolsa</label>
                   <input type="text" id="second-name-value-infantil" placeholder="Ej. Martín">
@@ -283,19 +297,20 @@
                 <small>Precio</small>
                 <div class="price">44,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Infantil" data-name-id="name-infantil" data-size-id="size-infantil" data-season-id="season-infantil" data-style-id="style-infantil" data-base-price="44,90 €" data-pack-key="infantil">Comprar ahora</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Infantil" data-name-id="name-infantil" data-size-id="size-infantil" data-season-id="season-infantil" data-style-id="style-infantil" data-base-price="44,90 €" data-pack-key="infantil">Pedir mi pack</button>
             </div>
-            <p class="product-note">Confirmación por WhatsApp y pago seguro mediante Bizum o enlace de pago.</p>
+            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
           </article>
 
           <article class="product-card" id="pack-completo">
-            <div class="product-topline">
-              <span class="product-chip chip-purple">6–8 años</span>
-              <span class="product-rating">Completo</span>
+            <div class="product-topline product-topline-final">
+              <span class="age-pill age-pill-cole">6–8 años</span>
+              <span class="product-label">Cole</span>
             </div>
-            <img class="product-photo" id="photo-completo" src="assets/completo_pv_basico.jpg" alt="Mockup Pack Completo">
-            <h3>Pack Completo</h3>
-            <p class="product-subtitle">Pensado para <strong>cubrir la semana completa + margen extra</strong> para imprevistos.</p>
+<img class="pack-real-image" src="assets/pack_cole_realista.jpg" alt="Mockup realista del Pack Cole con ropa y bolsa personalizada">
+<h3>Pack Cole</h3>
+            <div class="conversion-badge">Más margen para imprevistos</div>
+            <p class="product-subtitle">Para primeros cursos, con <strong>margen extra</strong> para excursiones e imprevistos.</p>
 
             <ul class="product-list">
               <li>4 pantalones</li>
@@ -305,9 +320,10 @@
               <li>1 bolsa personalizada con nombre</li>
             </ul>
 
+            <div class="product-visual-row"><span>👕</span><span>👖</span><span>🎒</span></div>
             <div class="product-meta">
-              <span>5 días + extra</span>
-              <span>Mayor tranquilidad</span>
+              <span>Primeros cursos</span>
+              <span>Semana + imprevistos</span>
             </div>
 
             <div class="selector-block">
@@ -339,7 +355,7 @@
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+6€)" data-pack="completo"> Pack calcetines (+6€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+8€)" data-pack="completo"> Segunda bolsa personalizada (+8€)</label>
-                <label class="check-option"><input type="checkbox" id="second-name-completo" value="Segundo nombre o apellido en bolsa (+10€)" data-pack="completo" data-toggle-target="second-name-field-completo"> Segundo nombre o apellido en bolsa (+10€)</label>
+                <label class="check-option"><input type="checkbox" id="second-name-completo" value="Segundo nombre o apellido en bolsa (+4€)" data-pack="completo" data-toggle-target="second-name-field-completo"> Segundo nombre o apellido en bolsa (+4€)</label>
                 <div class="extra-field" id="second-name-field-completo">
                   <label>Segundo nombre / apellido para la bolsa</label>
                   <input type="text" id="second-name-value-completo" placeholder="Ej. Martín">
@@ -352,88 +368,84 @@
                 <small>Precio</small>
                 <div class="price">59,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Completo" data-name-id="name-completo" data-size-id="size-completo" data-season-id="season-completo" data-style-id="style-completo" data-base-price="59,90 €" data-pack-key="completo">Comprar ahora</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Cole" data-name-id="name-completo" data-size-id="size-completo" data-season-id="season-completo" data-style-id="style-completo" data-base-price="59,90 €" data-pack-key="completo">Pedir mi pack</button>
             </div>
-            <p class="product-note">Confirmación por WhatsApp y pago seguro mediante Bizum o enlace de pago.</p>
+            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="como-funciona">
+    <section class="section how-section-clean" id="como-funciona">
       <div class="container">
         <div class="section-head center narrow">
           <span class="section-tag">Cómo funciona</span>
           <h2>Una compra guiada, simple y clara</h2>
+          <p>Eliges el pack, confirmamos contigo los detalles y finalizas el pedido con un método de pago seguro.</p>
         </div>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <h3>Elige tu pack</h3>
+        <div class="process-row">
+          <div class="process-step">
+            <span>1</span>
+            <span class="process-step-icon">🛍️</span><h3>Elige tu pack</h3>
             <p>Seleccionas pack, talla, temporada, estilo visual y extras.</p>
           </div>
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <h3>Te confirmamos el pedido</h3>
-            <p>Recibimos los datos por WhatsApp y te confirmamos disponibilidad y siguientes pasos.</p>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span>2</span>
+            <span class="process-step-icon">✅</span><h3>Confirmamos contigo</h3>
+            <p>Revisamos disponibilidad, nombre de la bolsa y cualquier duda.</p>
           </div>
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <h3>Finalizas el pago</h3>
-            <p>Cierras el pedido con total claridad mediante Bizum o enlace de pago seguro, sin dudas en el proceso.</p>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <span>3</span>
+            <span class="process-step-icon">🔒</span><h3>Finalizas el pago</h3>
+            <p>Cierras el pedido mediante Bizum o enlace de pago seguro.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="para-quien">
+    <section class="section audience-section-pro" id="para-quien">
       <div class="container">
-        <div class="section-head center narrow">
+        <div class="section-head center narrow audience-centered-head">
           <span class="section-tag">Para quién</span>
-          <h2>Una solución pensada para familias que valoran lo práctico</h2>
+          <h2>Para familias que quieren dejar la muda resuelta</h2>
+          <p>No vendemos ropa suelta: organizamos una necesidad semanal en un pack claro, práctico y fácil de pedir.</p>
         </div>
 
-        <div class="audience-grid">
-          <div class="audience-card">
-            <h3>Guardería</h3>
-            <p>Para peques con cambios más frecuentes y familias que necesitan tener varios recambios preparados.</p>
+        <div class="audience-options audience-options-centered">
+          <div>
+            <span class="audience-card-icon">👶</span><strong>Guardería</strong>
+            <span>0–24 meses</span>
+            <p>Para bebés y peques con cambios frecuentes.</p>
           </div>
-          <div class="audience-card">
-            <h3>Infantil</h3>
-            <p>La etapa ideal para un pack semanal claro, útil y fácil de entender desde el primer vistazo.</p>
+          <div>
+            <span class="audience-card-icon">🎒</span><strong>Infantil</strong>
+            <span>2–5 años</span>
+            <p>Para cubrir la semana del cole sin improvisar.</p>
           </div>
-          <div class="audience-card">
-            <h3>Primeros cursos</h3>
-            <p>Para familias que prefieren ir más cubiertas y tener margen ante cambios o imprevistos.</p>
+          <div>
+            <span class="audience-card-icon">🧢</span><strong>Cole</strong>
+            <span>5–8 años</span>
+            <p>Para familias que quieren margen ante excursiones o imprevistos.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft testimonials-section">
+    <section class="section value-section-pro">
       <div class="container">
-        <div class="section-head center narrow">
+        <div class="value-compact">
           <span class="section-tag">Lo que transmite</span>
           <h2>No es solo ropa: es tener la muda lista sin pensar cada semana.</h2>
+          <p>El valor de MudaLista está en ahorrar tiempo, evitar olvidos y dejar preparada una tarea que se repite durante todo el curso.</p>
         </div>
 
-        <div class="reviews-grid">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“Se entiende rapidísimo. No parece ropa suelta: parece una solución real para el día a día.”</p>
-            <strong>Perfil comprador ideal</strong>
-          </div>
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“La bolsa personalizada hace que el producto se vea más redondo y más útil.”</p>
-            <strong>Enfoque de marca</strong>
-          </div>
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>“El valor está en ahorrar tiempo, evitar olvidos y tenerlo todo preparado desde el inicio.”</p>
-            <strong>Argumento de venta</strong>
-          </div>
+        <div class="benefits-compact">
+          <div><span>✓</span><strong>Menos olvidos</strong><p>Todo queda agrupado en un pack pensado para la etapa del peque.</p></div>
+          <div><span>✓</span><strong>Más orden</strong><p>La bolsa personalizada hace que el pack se entienda y se use mejor.</p></div>
+          <div><span>✓</span><strong>Compra tranquila</strong><p>Eliges lo importante y confirmas el pedido con atención directa.</p></div>
         </div>
       </div>
     </section>
@@ -471,41 +483,41 @@
       <div class="container cta-box">
         <div>
           <span class="section-tag">Compra guiada</span>
-          <h2>Selecciona el pack y finaliza tu pedido con total claridad</h2>
-          <p>Una forma más profesional de empezar a vender desde ya, manteniendo la confianza y la atención directa durante la compra.</p>
+          <h2>Elige el pack y te ayudamos a cerrar el pedido</h2>
+          <p>Selecciona talla, temporada y estilo. Nosotros confirmamos disponibilidad y te enviamos el método de pago seguro.</p>
         </div>
-        <a href="#packs" class="btn btn-primary cta-main-btn">Comprar ahora</a>
+        <a href="#packs" class="btn btn-primary cta-main-btn">Pedir mi pack</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="footer-contacto">
-    <div class="container footer-balanced footer-full">
-      <div class="footer-brand-block">
+    <div class="container footer-final">
+      <div class="footer-brand-area">
         <div class="brand footer-brand">MudaLista</div>
         <p class="footer-copy">Packs de muda para guardería y cole pensados para vender practicidad, orden y tranquilidad a familias reales.</p>
       </div>
 
-      <nav class="footer-links" aria-label="Enlaces del footer">
+      <nav class="footer-nav" aria-label="Enlaces del footer">
         <a href="#packs">Packs</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#para-quien">Para quién</a>
         <a href="#faq">FAQ</a>
-        <a href="#footer-contacto">Contacto</a>
       </nav>
 
-      <div class="footer-contact-card">
-        <div class="footer-label-row">
-          <span class="footer-dot"></span>
-          <span class="footer-label">Contacto</span>
-        </div>
-        <a href="tel:+34600000000" class="footer-contact-link">+34 600 00 00 00</a>
-        <div class="footer-divider"></div>
-        <a href="mailto:hola@mudalista.com" class="footer-contact-link footer-contact-mail">hola@mudalista.com</a>
+      <div class="footer-contact-simple">
+        <a href="https://wa.me/34600000000" class="footer-contact-line" target="_blank" rel="noopener noreferrer">
+          <span class="icon">🟢</span>
+          <span>+34 600 00 00 00</span>
+        </a>
+        <a href="mailto:hola@mudalista.com" class="footer-contact-line">
+          <span class="icon">✉️</span>
+          <span>hola@mudalista.com</span>
+        </a>
       </div>
     </div>
 
-    <div class="container footer-bottom">
+    <div class="container footer-legal">
       <span>© 2026 MudaLista. Todos los derechos reservados.</span>
     </div>
   </footer>

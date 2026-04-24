@@ -139,7 +139,7 @@ orderButtons.forEach((button) => {
     const extrasText = extras.length ? extras.join(", ") : "Sin extras";
 
     const message =
-`Hola, quiero comprar ${packName}.
+`Hola, quiero pedir ${packName}.
 Nombre del peque: ${safeName}
 Talla: ${size}
 Temporada: ${season}
@@ -148,7 +148,7 @@ Extras: ${extrasText}
 Detalle: ${secondNameDetail}
 Precio base del pack: ${basePrice}
 
-Quiero confirmar disponibilidad y recibir el método de pago seguro.`;
+Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.`;
 
     const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
