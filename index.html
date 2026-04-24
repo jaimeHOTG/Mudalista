@@ -187,7 +187,7 @@
               <input type="text" id="name-guarderia" placeholder="Ej. Mateo">
 
               <label>Talla</label>
-              <select id="size-guarderia">
+              <select id="size-guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
                 <option>0-6 meses</option>
                 <option>6-12 meses</option>
                 <option>12-18 meses</option>
@@ -195,12 +195,12 @@
               </select>
 
               <label>Temporada</label>
-              <select id="season-guarderia" class="season-select" data-pack="guarderia">
+              <select id="season-guarderia" class="season-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
 <label>Estilo del pack</label>
-              <select id="style-guarderia" class="style-select" data-pack="guarderia">
+              <select id="style-guarderia" class="style-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
                 <option value="basico">Básico neutro</option>
                 <option value="suave">Colores suaves</option>
                 <option value="ilustrado">Ilustrado divertido</option>
@@ -258,19 +258,19 @@
               <input type="text" id="name-infantil" placeholder="Ej. Lucía">
 
               <label>Talla</label>
-              <select id="size-infantil">
+              <select id="size-infantil" onchange="window.mudalistaUpdatePack('infantil')">
                 <option>2-3 años</option>
                 <option>3-4 años</option>
                 <option>4-5 años</option>
               </select>
 
               <label>Temporada</label>
-              <select id="season-infantil" class="season-select" data-pack="infantil">
+              <select id="season-infantil" class="season-select" data-pack="infantil" onchange="window.mudalistaUpdatePack('infantil')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
 <label>Estilo del pack</label>
-              <select id="style-infantil" class="style-select" data-pack="infantil">
+              <select id="style-infantil" class="style-select" data-pack="infantil" onchange="window.mudalistaUpdatePack('infantil')">
                 <option value="basico">Básico neutro</option>
                 <option value="suave">Colores suaves</option>
                 <option value="ilustrado">Ilustrado divertido</option>
@@ -327,19 +327,19 @@
               <input type="text" id="name-completo" placeholder="Ej. Hugo">
 
               <label>Talla</label>
-              <select id="size-completo">
+              <select id="size-completo" onchange="window.mudalistaUpdatePack('completo')">
                 <option>5-6 años</option>
                 <option>6-7 años</option>
                 <option>7-8 años</option>
               </select>
 
               <label>Temporada</label>
-              <select id="season-completo" class="season-select" data-pack="completo">
+              <select id="season-completo" class="season-select" data-pack="completo" onchange="window.mudalistaUpdatePack('completo')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
 <label>Estilo del pack</label>
-              <select id="style-completo" class="style-select" data-pack="completo">
+              <select id="style-completo" class="style-select" data-pack="completo" onchange="window.mudalistaUpdatePack('completo')">
                 <option value="basico">Básico neutro</option>
                 <option value="suave">Colores suaves</option>
                 <option value="ilustrado">Ilustrado divertido</option>
@@ -540,5 +540,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
