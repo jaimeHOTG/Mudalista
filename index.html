@@ -28,7 +28,7 @@
 
       <div class="header-actions">
         <a href="#packs" class="btn btn-light">Ver packs</a>
-        <a href="#packs" class="btn btn-primary">Pedir mi pack</a>
+        <a href="#packs" class="btn btn-primary">Comprar mi pack</a>
       </div>
 
       <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
@@ -42,7 +42,7 @@
       <a href="#para-quien">Para quién</a>
       <a href="#faq">FAQ</a>
       <a href="#footer-contacto">Contacto</a>
-      <a href="#packs" class="btn btn-primary mobile-cta">Pedir mi pack</a>
+      <a href="#packs" class="btn btn-primary mobile-cta">Comprar mi pack</a>
     </div>
   </header>
 
@@ -64,44 +64,43 @@
             <div class="hero-mini hero-fixed-mini">
               <span>Ideal para guardería, infantil y cole</span>
               <span>Bolsa personalizada incluida</span>
-              <span>Compra guiada por WhatsApp</span>
+              <span>Pago online seguro y Bizum</span>
             </div>
           </div>
 
           <div class="hero-visual hero-fixed-visual">
-            <div class="hero-card hero-fixed-card hero-product-card-pro">
-              <div class="hero-photo-frame"><img src="assets/hero_pack_pro.jpg" alt="Pack de muda MudaLista con ropa y bolsa personalizada"></div>
-              <div class="hero-badge">Más vendido</div>
-              <h3>Pack Infantil</h3><p class='muted'>Prendas básicas y combinables, con tejidos suaves y resistentes.</p>
-              <p>La opción más equilibrada para tener mudas preparadas en el cole de forma simple y sin improvisar.</p>
+            <div class="hero-card hero-fixed-card hero-product-card-pro hero-pack-summary-card">
+              <span class="hero-badge hero-badge-floating">Más vendido</span>
+              <div class="hero-card-headline">
+                <span class="age-pill age-pill-infantil">3–6 años</span>
+                <span class="product-label">Infantil</span>
+              </div>
 
-              <div class="hero-stats">
-                <div class="stat-box">
-                  <strong>5</strong>
-                  <span>días cubiertos</span>
-                </div>
-                <div class="stat-box">
-                  <strong>2</strong>
-                  <span>pantalones</span>
-                </div>
-                <div class="stat-box">
-                  <strong>3</strong>
-                  <span>camisetas</span>
-                </div>
-                <div class="stat-box">
-                  <strong>4</strong>
-                  <span>interiores</span>
+              <div class="hero-pack-main">
+                <div class="hero-pack-image"><img src="assets/pack_infantil_prueba.jpg" alt="Pack Infantil de prueba con ropa y bolsa personalizada"><span class="hero-image-chip">Bolsa + ropa lista</span></div>
+                <div class="hero-pack-copy">
+                  <h3>Pack Infantil</h3>
+                  <p class="muted">El pack equilibrado para tener mudas preparadas sin complicaciones.</p>
                 </div>
               </div>
+
+              <div class="hero-includes-title">Incluye lo esencial:</div>
+              <ul class="hero-pack-list">
+                <li>3 camisetas</li>
+                <li>2 pantalones / shorts</li>
+                <li>1 sudadera</li>
+                <li>Ropa interior y calcetines</li>
+                <li>Bolsa personalizada</li>
+              </ul>
 
               <div class="hero-card-bottom">
                 <div>
                   <small>Desde</small>
-                  <div class="hero-price">39,90 €</div>
+                  <div class="hero-price">44,90 €</div>
                 </div>
-                <a href="#pack-infantil" class="btn btn-primary">Pedir mi pack</a>
+                <a href="#pack-infantil" class="btn btn-primary" data-open-pack="infantil">Elegir pack</a>
               </div>
-              <p class="hero-card-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
+              <p class="hero-card-note">Pago online seguro con tarjeta o Bizum.</p>
             </div>
           </div>
         </div>
@@ -223,15 +222,14 @@
                 </div>
               </div>
             </div>
-
             <div class="product-bottom product-bottom-centered">
               <div class="price-box">
                 <small>Precio</small>
                 <div class="price">39,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Guardería" data-name-id="name-guarderia" data-size-id="size-guarderia" data-season-id="season-guarderia" data-style-id="style-guarderia" data-base-price="39,90 €" data-pack-key="guarderia">Pedir mi pack</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Guardería" data-name-id="name-guarderia" data-size-id="size-guarderia" data-season-id="season-guarderia" data-style-id="style-guarderia" data-base-price="39,90 €" data-pack-key="guarderia">Comprar mi pack</button>
             </div>
-            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
+            <p class="product-note">Compra online con pasarela de pago segura o Bizum.</p>
           </article>
 
           <article class="product-card featured" id="pack-infantil">
@@ -240,7 +238,7 @@
               <span class="age-pill age-pill-infantil">3–6 años</span>
               <span class="product-label">Infantil</span>
             </div>
-<img class="pack-real-image" src="assets/pack_infantil_realista.jpg" alt="Mockup realista del Pack Infantil con ropa y bolsa personalizada">
+<img class="pack-real-image" src="assets/pack_infantil_prueba.jpg" alt="Pack Infantil de prueba con ropa y bolsa personalizada" loading="lazy" decoding="async">
 <h3>Pack Infantil</h3><p class='muted'>Prendas básicas y combinables, con tejidos suaves y resistentes.</p>
             <div class="conversion-badge">Pack más práctico</div>
             <p class="product-subtitle">Lo esencial para tener <strong>mudas preparadas sin complicaciones</strong>.</p>
@@ -300,15 +298,14 @@
                 </div>
               </div>
             </div>
-
             <div class="product-bottom product-bottom-centered">
               <div class="price-box">
                 <small>Precio</small>
                 <div class="price">44,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Infantil" data-name-id="name-infantil" data-size-id="size-infantil" data-season-id="season-infantil" data-style-id="style-infantil" data-base-price="44,90 €" data-pack-key="infantil">Pedir mi pack</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Infantil" data-name-id="name-infantil" data-size-id="size-infantil" data-season-id="season-infantil" data-style-id="style-infantil" data-base-price="44,90 €" data-pack-key="infantil">Comprar mi pack</button>
             </div>
-            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
+            <p class="product-note">Compra online con pasarela de pago segura o Bizum.</p>
           </article>
 
           <article class="product-card" id="pack-completo">
@@ -376,15 +373,14 @@
                 </div>
               </div>
             </div>
-
             <div class="product-bottom product-bottom-centered">
               <div class="price-box">
                 <small>Precio</small>
                 <div class="price">59,90 €</div>
               </div>
-              <button class="btn btn-primary order-btn" data-pack-name="Pack Cole" data-name-id="name-completo" data-size-id="size-completo" data-season-id="season-completo" data-style-id="style-completo" data-base-price="59,90 €" data-pack-key="completo">Pedir mi pack</button>
+              <button class="btn btn-primary order-btn" data-pack-name="Pack Cole" data-name-id="name-completo" data-size-id="size-completo" data-season-id="season-completo" data-style-id="style-completo" data-base-price="59,90 €" data-pack-key="completo">Comprar mi pack</button>
             </div>
-            <p class="product-note">Reserva por WhatsApp. Pago seguro por Bizum o enlace de pago.</p>
+            <p class="product-note">Compra online con pasarela de pago segura o Bizum.</p>
           </article>
         </div>
       </div>
@@ -394,8 +390,8 @@
       <div class="container">
         <div class="section-head center narrow">
           <span class="section-tag">Cómo funciona</span>
-          <h2>Una compra guiada, simple y clara</h2>
-          <p>Eliges el pack, confirmamos contigo los detalles y finalizas el pedido con un método de pago seguro.</p>
+          <h2>Una compra online, simple y clara</h2>
+          <p>Eliges el pack, revisas los detalles y finalizas el pedido con pasarela de pago online o Bizum.</p>
         </div>
 
         <div class="process-row">
@@ -414,7 +410,7 @@
           <div class="process-step">
             <span>3</span>
             <span class="process-step-icon">🔒</span><h3>Finalizas el pago</h3>
-            <p>Cierras el pedido mediante Bizum o enlace de pago seguro.</p>
+            <p>Cierras el pedido mediante pasarela de pago online segura o Bizum.</p>
           </div>
         </div>
       </div>
@@ -487,18 +483,18 @@
         
           <div class="faq-item">
             <button class="faq-question">¿Cómo se realiza el pago?</button>
-            <div class="faq-answer"><p>Tras confirmar talla, temporada, estilo y disponibilidad por WhatsApp, te enviamos un método de pago seguro mediante Bizum o enlace de pago.</p></div>
+            <div class="faq-answer"><p>El pago se realiza al finalizar el pedido mediante pasarela de pago online segura o Bizum. Antes de pagar deberás completar los datos obligatorios del pack seleccionado.</p></div>
           </div>
 </div>
       </div>
     </section>
 
-    <section class="section cta-section cierre-pro-section">
+    <section class="section cta-section cierre-pro-section" id="checkout">
       <div class="container cierre-pro-box">
         <div class="cierre-pro-copy">
-          <span class="section-tag">Compra guiada</span>
-          <h2>Elige el pack y envíanos el pedido por WhatsApp en menos de 1 minuto</h2>
-          <p>No necesitas completar un checkout largo. Seleccionas pack, edad/talla, temporada y nombre del peque. Recibimos todo listo para confirmar disponibilidad y preparar el pedido.</p>
+          <span class="section-tag">Compra online</span>
+          <h2>Elige el pack y continúa con pago online o Bizum</h2>
+          <p>Seleccionas pack, edad/talla, temporada, tipo y nombre del peque. Después continúas con el pago seguro con tarjeta o Bizum, como en cualquier tienda online.</p>
         </div>
 
         <div class="cierre-pro-steps">
@@ -514,21 +510,22 @@
           </div>
           <div class="cierre-step">
             <span>3</span>
-            <strong>Confirma pedido por WhatsApp</strong>
-            <small>Te ayudamos a cerrar el pedido</small>
+            <strong>Finaliza el pago</strong>
+            <small>Pasarela segura o Bizum</small>
           </div>
         </div>
 
+
         <div class="cierre-pro-action">
-          <a href="#packs" class="btn btn-primary cierre-pro-btn">Pedir pack ahora por WhatsApp</a>
-          <p>Sin pagos online complicados. Primero confirmamos contigo los detalles.</p>
+          <a href="#packs" class="btn btn-primary">Elegir un pack</a>
+          <p>Pago online sencillo y seguro, con tarjeta o Bizum.</p>
         </div>
       </div>
     </section>
   </main>
 
   
-<footer class="site-footer footer-pro">
+<footer id="footer-contacto" class="site-footer footer-pro">
   <div class="container footer-pro-inner">
 
     <div class="footer-brand-block">
@@ -549,7 +546,7 @@
 
     <div class="footer-col">
       <h4>Contacto</h4>
-      <a href="https://wa.me/34600000000" target="_blank">WhatsApp directo</a>
+      <a href="https://wa.me/34600000000?text=Hola%20MudaLista%2C%20necesito%20ayuda%20con%20un%20pack" target="_blank" rel="noopener">Atención al cliente</a>
       <a href="mailto:hola@mudalista.com">hola@mudalista.com</a>
     </div>
 

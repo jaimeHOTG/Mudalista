@@ -1,7 +1,5 @@
 /* MudaLista - versión reparada con Tipo de pack */
 (function () {
-  const WHATSAPP_PHONE = "34600000000";
-
   const CONTENT = {
     guarderia: {
       pv: {
@@ -109,6 +107,51 @@
     }
   };
 
+  // Enlaces reales de pago. Sustituye estos valores por tus Payment Links de Stripe
+  // y por el enlace/instrucción de Bizum de tu banco cuando lo tengas activo.
+  const PAYMENT_LINKS = {
+    guarderia: "",
+    infantil: "",
+    completo: ""
+  };
+
+  const BIZUM_LINKS = {
+    guarderia: "",
+    infantil: "",
+    completo: ""
+  };
+
+
+  // Control sencillo de stock por combinación.
+  // Por defecto todo aparece disponible. Para bloquear una combinación, añade:
+  // "infantil|3-4 años|pv|nino": false
+  const STOCK = {
+    // Ejemplo desactivado: "infantil|3-4 años|pv|nino": false
+  };
+
+  function stockKey(pack) {
+    return [pack, getSize(pack), getSeason(pack), getType(pack)].join("|");
+  }
+
+  function hasEnoughSelectionForStock(pack) {
+    return Boolean(getSize(pack) && getSeason(pack) && getType(pack));
+  }
+
+  function isAvailable(pack) {
+    if (!hasEnoughSelectionForStock(pack)) return true;
+    const key = stockKey(pack);
+    return STOCK[key] !== false;
+  }
+
+  function updateAvailability(pack) {
+    const button = document.querySelector('.order-btn[data-pack-key="' + pack + '"]');
+    if (!button) return;
+
+    const available = isAvailable(pack);
+    button.disabled = hasEnoughSelectionForStock(pack) && !available;
+    button.classList.toggle("is-disabled", hasEnoughSelectionForStock(pack) && !available);
+  }
+
   const IMAGE_MAP = {
     guarderia: {
       pv: { basico: "assets/guarderia_pv_basico.jpg", suave: "assets/guarderia_pv_suave.jpg", ilustrado: "assets/guarderia_pv_ilustrado.jpg" },
@@ -126,6 +169,12 @@
 
   function byId(id) {
     return document.getElementById(id);
+  }
+
+  function escapeHTML(value) {
+    return String(value || "").replace(/[&<>'"]/g, function (char) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;" }[char];
+    });
   }
 
   function valueOf(id, fallback) {
@@ -244,6 +293,7 @@
   function updatePack(pack) {
     renderContent(pack);
     updateImage(pack);
+    updateAvailability(pack);
   }
 
   function updateAll() {
@@ -286,6 +336,97 @@
     return "Sin segundo nombre/apellido en bolsa";
   }
 
+  function selectedOrderDetails(button) {
+    const pack = button.dataset.packKey;
+    const packName = button.dataset.packName || pack;
+    const nameNode = byId(button.dataset.nameId);
+    const sizeNode = byId(button.dataset.sizeId);
+    const seasonNode = byId(button.dataset.seasonId);
+    const styleNode = byId(button.dataset.styleId);
+    const typeNode = byId("type-" + pack);
+
+    return {
+      pack: pack,
+      packName: packName,
+      price: button.dataset.basePrice || "",
+      name: nameNode ? nameNode.value.trim() : "",
+      size: sizeNode ? textOf(button.dataset.sizeId, "") : "",
+      season: seasonNode ? textOf(button.dataset.seasonId, "") : "",
+      style: styleNode ? textOf(button.dataset.styleId, "") : "",
+      type: typeNode ? textOf("type-" + pack, "") : "",
+      items: packItems(pack),
+      extras: getCheckedExtras(pack),
+      secondName: getSecondNameDetail(pack)
+    };
+  }
+
+  function openPaymentModal(details) {
+    const existing = byId("payment-modal");
+    if (existing) existing.remove();
+
+    const stripeUrl = PAYMENT_LINKS[details.pack] || "";
+    const bizumUrl = BIZUM_LINKS[details.pack] || "";
+    const extras = details.extras.length ? details.extras.join(", ") : "Sin extras";
+
+    const modal = document.createElement("div");
+    modal.id = "payment-modal";
+    modal.className = "payment-modal";
+    modal.innerHTML = '' +
+      '<div class="payment-modal-card" role="dialog" aria-modal="true" aria-labelledby="payment-modal-title">' +
+        '<button class="payment-modal-close" type="button" aria-label="Cerrar">×</button>' +
+        '<span class="section-tag">Pago seguro</span>' +
+        '<h3 id="payment-modal-title">Finaliza tu pedido</h3>' +
+        '<div class="payment-modal-summary">' +
+          '<strong>' + escapeHTML(details.packName) + ' · ' + escapeHTML(details.price) + '</strong>' +
+          '<span><b>Nombre:</b> ' + escapeHTML(details.name) + '</span>' +
+          '<span><b>Talla:</b> ' + escapeHTML(details.size) + '</span>' +
+          '<span><b>Temporada:</b> ' + escapeHTML(details.season) + '</span>' +
+          '<span><b>Tipo:</b> ' + escapeHTML(details.type) + '</span>' +
+          '<span><b>Estilo:</b> ' + escapeHTML(details.style) + '</span>' +
+          '<span><b>Extras:</b> ' + escapeHTML(extras) + '</span>' +
+        '</div>' +
+        '<div class="payment-modal-actions">' +
+          '<a class="btn btn-primary" data-payment="card" href="' + (stripeUrl || '#') + '" target="_blank" rel="noopener">Pagar con tarjeta</a>' +
+          '<a class="btn btn-secondary" data-payment="bizum" href="' + (bizumUrl || '#') + '" target="_blank" rel="noopener">Pagar con Bizum</a>' +
+        '</div>' +
+        '<p class="payment-modal-note">Pago 100% seguro · Tarjeta o Bizum</p>' +
+      '</div>';
+
+    document.body.appendChild(modal);
+
+    modal.querySelector(".payment-modal-close").addEventListener("click", function () { modal.remove(); });
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) modal.remove();
+    });
+
+    const card = modal.querySelector('[data-payment="card"]');
+    const bizum = modal.querySelector('[data-payment="bizum"]');
+
+    if (!stripeUrl) {
+      card.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Para activar el pago real con tarjeta, añade tu Payment Link de Stripe en PAYMENT_LINKS dentro de script.js.");
+      });
+    }
+
+    if (!bizumUrl) {
+      bizum.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Para activar Bizum, añade el enlace o instrucción de pago Bizum en BIZUM_LINKS dentro de script.js.");
+      });
+    }
+  }
+
+  function focusPackConfig(pack) {
+    const card = byId("pack-" + pack);
+    if (!card) return;
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+    card.classList.add("pack-focus");
+    window.setTimeout(function () { card.classList.remove("pack-focus"); }, 1400);
+    const input = byId("name-" + pack);
+    if (input) window.setTimeout(function () { input.focus(); }, 500);
+  }
+
   function setupOrders() {
     document.querySelectorAll(".order-btn").forEach(function (button) {
       button.addEventListener("click", function () {
@@ -296,34 +437,41 @@
         const seasonNode = byId(button.dataset.seasonId);
         const styleNode = byId(button.dataset.styleId);
 
-        const name = nameNode && nameNode.value.trim() ? nameNode.value.trim() : "Pendiente de confirmar";
-        const selectedSize = sizeNode ? sizeNode.value : "Pendiente de confirmar";
-        const selectedSeason = seasonNode ? seasonNode.options[seasonNode.selectedIndex].text : "Pendiente de confirmar";
-        const selectedStyle = styleNode ? styleNode.options[styleNode.selectedIndex].text : "Pendiente de confirmar";
-        const selectedType = textOf("type-" + pack, "Unisex");
-        const extras = getCheckedExtras(pack);
-        const extrasText = extras.length ? extras.join(", ") : "Sin extras";
+        const typeNode = byId("type-" + pack);
+        const missing = [];
 
-        const message =
-`Hola, quiero pedir ${packName}.
-Nombre del peque: ${name}
-Talla: ${selectedSize}
-Temporada: ${selectedSeason}
-Tipo de pack: ${selectedType}
-Estilo del pack: ${selectedStyle}
-Contenido del pack: ${packItems(pack).join(", ")}
-Extras: ${extrasText}
-Detalle: ${getSecondNameDetail(pack)}
-Precio base del pack: ${button.dataset.basePrice}
+        if (!nameNode || !nameNode.value.trim()) missing.push("el nombre del peque");
+        if (!sizeNode || !sizeNode.value) missing.push("la talla");
+        if (!seasonNode || !seasonNode.value) missing.push("la temporada");
+        if (!styleNode || !styleNode.value) missing.push("el estilo");
+        if (!typeNode || !typeNode.value) missing.push("el tipo de pack");
 
-Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.`;
+        if (!isAvailable(pack)) {
+          alert("Ahora mismo no hay stock para esa combinación. Cambia talla, temporada o tipo de pack.");
+          updateAvailability(pack);
+          return;
+        }
 
-        window.open("https://wa.me/" + WHATSAPP_PHONE + "?text=" + encodeURIComponent(message), "_blank");
+        if (missing.length) {
+          alert("Antes de pagar, completa: " + missing.join(", ") + ".");
+          const firstMissing = !nameNode || !nameNode.value.trim() ? nameNode : (!sizeNode || !sizeNode.value ? sizeNode : (!seasonNode || !seasonNode.value ? seasonNode : (!styleNode || !styleNode.value ? styleNode : typeNode)));
+          if (firstMissing && firstMissing.focus) firstMissing.focus();
+          return;
+        }
+
+        openPaymentModal(selectedOrderDetails(button));
       });
     });
   }
 
   function setupMisc() {
+    document.querySelectorAll("[data-open-pack]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        focusPackConfig(link.dataset.openPack);
+      });
+    });
+
     const menuBtn = byId("menuBtn");
     const mobileMenu = byId("mobileMenu");
 

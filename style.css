@@ -554,7 +554,7 @@ a{text-decoration:none;color:inherit}
   background:#f3f0f7;
 }
 
-/* Compra guiada centering */
+/* Compra online centering */
 .cta-section{
   text-align:center;
 }
@@ -3895,7 +3895,7 @@ body{
 }
 
 .product-bottom-centered::before {
-  content: "Reserva asistida";
+  content: "Compra online";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3961,4 +3961,1027 @@ body{
   color: #6f687e !important;
   font-size: .96rem !important;
   line-height: 1.5 !important;
+}
+
+
+/* === Corrección visual HERO Pack: mismo lenguaje que sección de packs === */
+/* Mantiene textos y métricas, solo adapta el diseño visual */
+.hero-product-card-pro {
+  position: relative !important;
+  overflow: visible !important;
+  background:
+    radial-gradient(circle at 86% 5%, rgba(255,111,174,.12), transparent 30%),
+    linear-gradient(180deg,#fff 0%,#fff8fc 100%) !important;
+  border: 2px solid rgba(255,111,174,.42) !important;
+  border-radius: 34px !important;
+  padding: 28px !important;
+  box-shadow: 0 28px 70px rgba(255,111,174,.13) !important;
+}
+
+.hero-product-card-pro .hero-photo-frame {
+  height: 250px !important;
+  margin: 0 0 24px !important;
+  border-radius: 26px !important;
+  border: 1px solid rgba(234,223,241,.95) !important;
+  box-shadow: 0 14px 32px rgba(77,52,96,.08) !important;
+  background: #fff !important;
+}
+
+.hero-product-card-pro .hero-photo-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.hero-product-card-pro .hero-photo-frame::after {
+  display: none !important;
+}
+
+.hero-product-card-pro .hero-badge {
+  position: absolute !important;
+  top: -22px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 5 !important;
+  min-width: 180px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background: #ff6fae !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  padding: 14px 24px !important;
+  box-shadow: 0 16px 30px rgba(255,111,174,.24) !important;
+}
+
+.hero-product-card-pro h3 {
+  text-align: left !important;
+  font-size: clamp(2rem, 3.2vw, 2.7rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -.035em !important;
+  color: #30293a !important;
+  margin: 0 0 14px !important;
+}
+
+.hero-product-card-pro .muted {
+  background: linear-gradient(180deg,#fff,#fff8fc) !important;
+  border: 1px solid rgba(234,223,241,.95) !important;
+  border-radius: 18px !important;
+  padding: 14px 16px !important;
+  margin: 0 0 16px !important;
+  color: #5f5870 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.5 !important;
+  box-shadow: 0 8px 18px rgba(90,62,110,.04) !important;
+}
+
+.hero-product-card-pro > p:not(.hero-card-note):not(.muted) {
+  border-left: 4px solid #ff6fae !important;
+  padding: 4px 0 4px 14px !important;
+  margin: 0 0 22px !important;
+  color: #6f687e !important;
+  line-height: 1.58 !important;
+}
+
+/* Mantener el bloque de métricas intacto en estructura, pero encajado mejor */
+.hero-product-card-pro .hero-stats {
+  margin-top: 18px !important;
+  margin-bottom: 22px !important;
+}
+
+.hero-product-card-pro .stat-box {
+  background: #fff !important;
+  border: 1px solid rgba(234,223,241,.95) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 12px 26px rgba(90,62,110,.045) !important;
+}
+
+/* Cierre de precio del hero con el mismo estilo premium del CTA */
+.hero-product-card-pro .hero-card-bottom {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,111,174,.14), transparent 42%),
+    linear-gradient(180deg,#ffffff 0%,#fff2f8 100%) !important;
+  border: 1px solid rgba(255,111,174,.18) !important;
+  border-radius: 24px !important;
+  padding: 22px 18px 24px !important;
+  margin-top: 22px !important;
+  box-shadow:
+    0 -8px 24px rgba(255,111,174,.07),
+    0 16px 34px rgba(95,58,115,.08) !important;
+}
+
+.hero-product-card-pro .hero-card-bottom::before {
+  content: "Compra online";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(255,111,174,.22);
+  color: #e94b91;
+  font-size: .82rem;
+  font-weight: 900;
+}
+
+.hero-product-card-pro .hero-card-bottom small {
+  display: block !important;
+  text-align: center !important;
+  color: #7a728a !important;
+  font-weight: 800 !important;
+  font-size: .95rem !important;
+}
+
+.hero-product-card-pro .hero-price {
+  display: block !important;
+  text-align: center !important;
+  color: #e94b91 !important;
+  font-size: clamp(2rem, 3vw, 2.45rem) !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: -.035em !important;
+  margin-top: 4px !important;
+}
+
+.hero-product-card-pro .hero-card-bottom .btn {
+  display: block !important;
+  min-width: 230px !important;
+  min-height: 58px !important;
+  margin: 16px auto 0 !important;
+  padding: 17px 28px !important;
+  border-radius: 999px !important;
+  font-size: 1.02rem !important;
+  font-weight: 950 !important;
+  box-shadow:
+    0 16px 30px rgba(255,111,174,.28),
+    inset 0 1px 0 rgba(255,255,255,.35) !important;
+}
+
+.hero-product-card-pro .hero-card-note {
+  text-align: center !important;
+  margin-top: 16px !important;
+  color: #6f687e !important;
+  font-size: .96rem !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 780px) {
+  .hero-product-card-pro {
+    padding: 22px !important;
+  }
+
+  .hero-product-card-pro .hero-photo-frame {
+    height: 210px !important;
+  }
+}
+
+/* === Ajuste solicitado: Hero Pack Infantil más compacto y equilibrado === */
+.hero-product-card-pro {
+  max-width: 460px !important;
+  padding: 20px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+
+.hero-product-card-pro .hero-photo-frame {
+  height: 160px !important;
+  margin-bottom: 14px !important;
+  border-radius: 20px !important;
+}
+
+.hero-product-card-pro .hero-badge {
+  top: 14px !important;
+  left: auto !important;
+  right: 14px !important;
+  transform: none !important;
+  min-width: auto !important;
+  padding: 8px 13px !important;
+  font-size: .82rem !important;
+}
+
+.hero-product-card-pro h3 {
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem) !important;
+  margin-bottom: 8px !important;
+}
+
+.hero-product-card-pro .muted {
+  padding: 10px 12px !important;
+  margin-bottom: 10px !important;
+  font-size: .95rem !important;
+  line-height: 1.42 !important;
+}
+
+.hero-product-card-pro > p:not(.hero-card-note):not(.muted) {
+  margin-bottom: 12px !important;
+  padding-left: 10px !important;
+  font-size: .94rem !important;
+  line-height: 1.45 !important;
+}
+
+.hero-product-card-pro .hero-stats {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 8px !important;
+  margin: 12px 0 14px !important;
+}
+
+.hero-product-card-pro .stat-box {
+  padding: 9px 6px !important;
+  border-radius: 16px !important;
+}
+
+.hero-product-card-pro .stat-box strong {
+  font-size: 1.45rem !important;
+}
+
+.hero-product-card-pro .stat-box span {
+  font-size: .76rem !important;
+  line-height: 1.15 !important;
+}
+
+.hero-product-card-pro .hero-card-bottom {
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+  padding: 14px !important;
+  margin-top: 12px !important;
+  border-radius: 20px !important;
+}
+
+.hero-product-card-pro .hero-card-bottom::before {
+  content: none !important;
+}
+
+.hero-product-card-pro .hero-card-bottom small,
+.hero-product-card-pro .hero-price {
+  text-align: left !important;
+}
+
+.hero-product-card-pro .hero-price {
+  font-size: 1.85rem !important;
+}
+
+.hero-product-card-pro .hero-card-bottom .btn {
+  min-width: 150px !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 13px 16px !important;
+  font-size: .94rem !important;
+}
+
+.hero-product-card-pro .hero-card-note {
+  margin-top: 10px !important;
+  font-size: .88rem !important;
+}
+
+.checkout-summary {
+  margin: 18px 0 6px;
+  padding: 18px;
+  background: rgba(255,255,255,.82);
+  border: 1px solid rgba(234,223,241,.95);
+  border-radius: 22px;
+  box-shadow: 0 12px 26px rgba(90,62,110,.06);
+}
+.checkout-summary strong { display:block; margin-bottom:6px; font-weight:950; color:#30293a; }
+.checkout-summary p { margin:0; color:#6f687e; line-height:1.55; }
+.payment-methods { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.payment-methods span { padding:7px 10px; border-radius:999px; background:#fff1f7; border:1px solid #ffd5e5; color:#e94b91; font-weight:900; font-size:.85rem; }
+
+@media (max-width: 780px) {
+  .hero-product-card-pro .hero-stats { grid-template-columns: repeat(2, 1fr) !important; }
+  .hero-product-card-pro .hero-card-bottom { flex-direction: column !important; text-align:center !important; }
+  .hero-product-card-pro .hero-card-bottom small,
+  .hero-product-card-pro .hero-price { text-align:center !important; }
+  .hero-product-card-pro .hero-card-bottom .btn { width:100% !important; }
+}
+
+
+/* === Revisión: cabecera Pack Infantil más similar a la tarjeta de packs === */
+.hero-pack-summary-card {
+  max-width: 440px !important;
+  padding: 22px !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(248, 95, 165, .24) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,247,251,.94)) !important;
+  box-shadow: 0 24px 60px rgba(84,58,108,.12) !important;
+}
+
+.hero-pack-summary-card .hero-badge-floating {
+  position: absolute !important;
+  top: 14px !important;
+  right: 16px !important;
+  left: auto !important;
+  transform: none !important;
+  z-index: 4 !important;
+}
+
+.hero-pack-summary-card .hero-card-headline {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  margin: 0 104px 14px 0 !important;
+}
+
+.hero-pack-summary-card .hero-pack-main {
+  display: grid !important;
+  grid-template-columns: 116px 1fr !important;
+  gap: 16px !important;
+  align-items: center !important;
+  margin-bottom: 14px !important;
+}
+
+.hero-pack-summary-card .hero-pack-image {
+  height: 116px !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  box-shadow: 0 14px 30px rgba(84,58,108,.10) !important;
+}
+
+.hero-pack-summary-card .hero-pack-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.hero-pack-summary-card h3 {
+  text-align: left !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.2rem) !important;
+  margin: 0 0 8px !important;
+  line-height: 1.02 !important;
+}
+
+.hero-pack-summary-card .muted {
+  text-align: left !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  font-size: .98rem !important;
+  line-height: 1.42 !important;
+}
+
+.hero-pack-summary-card .hero-includes-title {
+  font-weight: 950 !important;
+  color: #2f2639 !important;
+  margin: 12px 0 8px !important;
+}
+
+.hero-pack-summary-card .hero-pack-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px 10px !important;
+  padding: 0 !important;
+  margin: 0 0 16px !important;
+  list-style: none !important;
+}
+
+.hero-pack-summary-card .hero-pack-list li {
+  position: relative !important;
+  padding: 10px 10px 10px 28px !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.78) !important;
+  border: 1px solid rgba(248,95,165,.15) !important;
+  color: #706a80 !important;
+  font-size: .9rem !important;
+  line-height: 1.22 !important;
+  font-weight: 750 !important;
+}
+
+.hero-pack-summary-card .hero-pack-list li::before {
+  content: "✓" !important;
+  position: absolute !important;
+  left: 10px !important;
+  top: 9px !important;
+  color: #f85fa5 !important;
+  font-weight: 950 !important;
+}
+
+.hero-pack-summary-card .hero-card-bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  text-align: left !important;
+  padding: 14px 16px !important;
+  margin-top: 0 !important;
+  border-radius: 22px !important;
+}
+
+.hero-pack-summary-card .hero-card-bottom .btn {
+  min-width: 150px !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 14px 20px !important;
+  font-size: .98rem !important;
+}
+
+.hero-pack-summary-card .hero-price {
+  font-size: clamp(1.8rem, 2.7vw, 2.25rem) !important;
+  text-align: left !important;
+}
+
+.hero-pack-summary-card .hero-card-note {
+  margin: 12px 0 0 !important;
+  font-size: .92rem !important;
+}
+
+@media (max-width: 780px) {
+  .hero-pack-summary-card .hero-pack-main {
+    grid-template-columns: 96px 1fr !important;
+  }
+
+  .hero-pack-summary-card .hero-pack-image {
+    height: 96px !important;
+  }
+
+  .hero-pack-summary-card .hero-pack-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-pack-summary-card .hero-card-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .hero-pack-summary-card .hero-price {
+    text-align: center !important;
+  }
+}
+
+
+/* === Ajuste final solicitado: sin recuadro extra en compra online === */
+.checkout-summary { display: none !important; }
+
+/* === Cabecera Pack Infantil: tarjeta compacta, equilibrada y similar a sección de packs === */
+.hero-pack-summary-card { max-width: 430px !important; padding: 20px !important; }
+.hero-pack-summary-card .hero-card-headline { margin-bottom: 12px !important; }
+.hero-pack-summary-card .hero-pack-main { grid-template-columns: 104px 1fr !important; gap: 14px !important; }
+.hero-pack-summary-card .hero-pack-image { height: 104px !important; }
+.hero-pack-summary-card .hero-pack-list { gap: 7px !important; margin-bottom: 14px !important; }
+.hero-pack-summary-card .hero-pack-list li { padding: 9px 9px 9px 27px !important; min-height: 42px !important; display: flex !important; align-items: center !important; }
+.hero-pack-summary-card .hero-card-bottom { background: linear-gradient(180deg,#ffffff 0%,#fff2f8 100%) !important; border: 1px solid rgba(255,111,174,.18) !important; }
+
+/* === Ajuste cabecera Pack Infantil hero: más parecido al card de packs + sudadera === */
+.hero-pack-summary-card {
+  padding-top: 26px !important;
+}
+
+.hero-pack-summary-card .hero-badge-floating {
+  top: 20px !important;
+  right: 24px !important;
+  padding: 12px 20px !important;
+  border-radius: 999px !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  box-shadow: 0 12px 24px rgba(248,95,165,.24) !important;
+}
+
+.hero-pack-summary-card .hero-card-headline {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  margin: 0 150px 18px 0 !important;
+  min-height: 46px !important;
+}
+
+.hero-pack-summary-card .age-pill-infantil {
+  padding: 12px 22px !important;
+  border-radius: 999px !important;
+  font-size: 1.05rem !important;
+  font-weight: 950 !important;
+  background: #ffe68e !important;
+  color: #74570a !important;
+  box-shadow: none !important;
+}
+
+.hero-pack-summary-card .product-label {
+  font-size: 1.05rem !important;
+  font-weight: 950 !important;
+  color: #7a728a !important;
+  white-space: nowrap !important;
+}
+
+.hero-pack-summary-card .hero-pack-list {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.hero-pack-summary-card .hero-pack-list li:nth-child(5) {
+  grid-column: 1 / -1 !important;
+}
+
+@media (max-width: 780px) {
+  .hero-pack-summary-card .hero-badge-floating {
+    top: 18px !important;
+    right: 18px !important;
+  }
+
+  .hero-pack-summary-card .hero-card-headline {
+    margin-right: 0 !important;
+    padding-right: 138px !important;
+    min-height: 42px !important;
+  }
+
+  .hero-pack-summary-card .age-pill-infantil {
+    padding: 10px 16px !important;
+    font-size: .98rem !important;
+  }
+}
+
+
+/* === Ajustes finales: badge integrado, imagen mayor, chips equilibrados y stock === */
+.hero-pack-summary-card{
+  max-width: 540px !important;
+  padding: 28px 26px 22px !important;
+  overflow: visible !important;
+}
+.hero-pack-summary-card .hero-badge-floating{
+  top: -19px !important;
+  right: 24px !important;
+  transform: none !important;
+  padding: 13px 24px !important;
+  border: 4px solid #fff7fb !important;
+  box-shadow: 0 14px 28px rgba(248,95,165,.26) !important;
+}
+.hero-pack-summary-card .hero-card-headline{ margin: 0 160px 18px 0 !important; }
+.hero-pack-summary-card .hero-pack-main{
+  grid-template-columns: 148px 1fr !important;
+  gap: 18px !important;
+  margin-bottom: 18px !important;
+}
+.hero-pack-summary-card .hero-pack-image{
+  height: 138px !important;
+  border-radius: 24px !important;
+}
+.hero-pack-summary-card .hero-pack-list li:nth-child(5){
+  grid-column: auto !important;
+  justify-self: start !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  padding-right: 18px !important;
+}
+.stock-status{
+  margin: 14px 0 0 !important;
+  padding: 10px 14px !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-weight: 850 !important;
+  font-size: .92rem !important;
+  color: #4d7c36 !important;
+  background: #f2faed !important;
+  border: 1px solid #d8edca !important;
+}
+.stock-status::before{content:"✓"; font-weight:950;}
+.stock-status.is-out{
+  color: #9a3958 !important;
+  background: #fff0f5 !important;
+  border-color: #ffc6da !important;
+}
+.stock-status.is-out::before{content:"!";}
+.order-btn.is-disabled,.order-btn:disabled{
+  opacity: .55 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  filter: grayscale(.08) !important;
+}
+@media (max-width: 780px){
+  .hero-pack-summary-card{ max-width:100% !important; padding:28px 18px 20px !important; }
+  .hero-pack-summary-card .hero-card-headline{ margin-right:0 !important; padding-right:132px !important; }
+  .hero-pack-summary-card .hero-pack-main{ grid-template-columns:122px 1fr !important; }
+  .hero-pack-summary-card .hero-pack-image{ height:118px !important; }
+  .hero-pack-summary-card .hero-pack-list li:nth-child(5){ width:auto !important; }
+}
+
+/* === Pulido final solicitado: badge sin borde, imagen con más presencia, footer y stock discreto === */
+.hero-pack-summary-card .hero-badge-floating,
+#pack-infantil .featured-badge-floating{
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 14px 28px rgba(248,95,165,.24) !important;
+}
+.hero-pack-summary-card .hero-badge-floating{ top: -27px !important; right: 26px !important; }
+#pack-infantil .featured-badge-floating{ top: -27px !important; left: 32px !important; }
+.hero-pack-summary-card .hero-pack-main{ grid-template-columns: 172px 1fr !important; gap: 22px !important; }
+.hero-pack-summary-card .hero-pack-image{ height: 158px !important; }
+.hero-pack-summary-card .hero-pack-image img{ width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.footer-col h4{
+  font-size: 1.18rem !important;
+  font-weight: 950 !important;
+  color: #2f2939 !important;
+  letter-spacing: .01em !important;
+  margin-bottom: 14px !important;
+}
+.footer-col h4::after{
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: #f85fa5;
+  opacity: .75;
+}
+.stock-row{ display:flex !important; justify-content:center !important; margin: 12px 0 4px !important; }
+.stock-status{
+  margin:0 !important;
+  padding:5px 10px !important;
+  border-radius:999px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:6px !important;
+  font-size:.78rem !important;
+  line-height:1 !important;
+  font-weight:850 !important;
+  color:#3f7a37 !important;
+  background:#eef8eb !important;
+  border:1px solid #d9efcf !important;
+}
+.stock-status::before{ content:"✓" !important; font-size:.88rem !important; font-weight:950 !important; }
+.stock-status.stock-pending{ color:#776f86 !important; background:#f7f4f8 !important; border-color:#ece3f0 !important; }
+.stock-status.stock-pending::before{ content:"·" !important; font-size:1.1rem !important; line-height:.7 !important; }
+.stock-status.is-out{ color:#b33a62 !important; background:#fff1f6 !important; border-color:#ffc8dc !important; }
+.stock-status.is-out::before{ content:"×" !important; }
+.order-btn.is-disabled,.order-btn:disabled{ opacity:.55 !important; cursor:not-allowed !important; filter:grayscale(.08) !important; }
+@media (max-width:780px){
+  .hero-pack-summary-card .hero-pack-main{grid-template-columns:136px 1fr !important;gap:16px !important;}
+  .hero-pack-summary-card .hero-pack-image{height:128px !important;}
+  .hero-pack-summary-card .hero-badge-floating{right:18px !important;}
+}
+@media (max-width:560px){
+  .hero-pack-summary-card .hero-pack-main{grid-template-columns:1fr !important;}
+  .hero-pack-summary-card .hero-pack-image{height:170px !important;max-width:230px !important;}
+}
+
+
+/* === Ajuste solicitado: conservar diseño anterior y solo ampliar/reubicar imagen hero Pack Infantil === */
+.hero-pack-summary-card .hero-pack-main{
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+  align-items: start !important;
+}
+.hero-pack-summary-card .hero-pack-image{
+  width: 100% !important;
+  height: 220px !important;
+  max-width: none !important;
+  border-radius: 24px !important;
+}
+.hero-pack-summary-card .hero-pack-image img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.hero-pack-summary-card .hero-pack-copy{
+  width: 100% !important;
+}
+.stock-row{
+  display: none !important;
+}
+@media (max-width: 780px){
+  .hero-pack-summary-card .hero-pack-image{ height: 190px !important; }
+}
+@media (max-width: 560px){
+  .hero-pack-summary-card .hero-pack-image{ height: 170px !important; max-width:none !important; }
+}
+
+/* === Últimos ajustes: imagen real del pack + chip sobre imagen + checkout preparado === */
+.hero-pack-summary-card .hero-pack-image{
+  position: relative !important;
+  overflow: hidden !important;
+}
+.hero-pack-summary-card .hero-pack-image img{
+  object-position: center center !important;
+}
+.hero-image-chip{
+  position:absolute;
+  left:22px;
+  bottom:20px;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.92);
+  color:#ee4f98;
+  font-weight:950;
+  font-size:.98rem;
+  box-shadow:0 14px 30px rgba(238,79,152,.16);
+}
+.checkout-panel{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+.checkout-summary{
+  width:100%;
+  max-width:620px;
+  padding:20px 24px;
+  border-radius:24px;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(248,95,165,.18);
+  text-align:center;
+  color:#746d84;
+}
+.checkout-summary strong,
+.checkout-summary span{
+  display:block;
+}
+.checkout-summary strong{
+  color:#2f2939;
+  margin-bottom:8px;
+  font-size:1.1rem;
+}
+.checkout-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
+.checkout-note,
+.checkout-empty{
+  margin:0;
+  color:#746d84;
+  font-weight:750;
+  text-align:center;
+}
+.pack-focus{
+  animation: packFocusPulse 1.2s ease;
+}
+@keyframes packFocusPulse{
+  0%{ box-shadow:0 0 0 0 rgba(248,95,165,.32); }
+  55%{ box-shadow:0 0 0 12px rgba(248,95,165,.08); }
+  100%{ box-shadow:0 0 0 0 rgba(248,95,165,0); }
+}
+@media (max-width:560px){
+  .hero-image-chip{ left:14px; bottom:14px; padding:10px 14px; font-size:.9rem; }
+  .checkout-buttons{ flex-direction:column; width:100%; }
+  .checkout-buttons .btn{ width:100%; }
+}
+
+/* === Pago desde botón Comprar mi pack === */
+.payment-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(48,41,58,.34);
+  backdrop-filter:blur(6px);
+}
+.payment-modal-card{
+  position:relative;
+  width:min(560px,100%);
+  padding:28px;
+  border:1px solid rgba(244,163,193,.55);
+  border-radius:28px;
+  background:linear-gradient(180deg,#fff 0%,#fff7fb 100%);
+  box-shadow:0 30px 90px rgba(48,41,58,.18);
+  text-align:center;
+}
+.payment-modal-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:999px;
+  background:#fff;
+  color:#6f687e;
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+}
+.payment-modal-card h3{
+  margin:10px 0 16px;
+  font-size:30px;
+  color:#30293a;
+}
+.payment-modal-summary{
+  display:grid;
+  gap:6px;
+  margin:0 auto 20px;
+  color:#6f687e;
+  line-height:1.45;
+}
+.payment-modal-summary strong{
+  color:#30293a;
+  font-size:18px;
+}
+.payment-modal-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.payment-modal-note{
+  margin:16px 0 0;
+  font-size:13px;
+  color:#7b7388;
+}
+@media (max-width:640px){
+  .payment-modal-actions{flex-direction:column;}
+  .payment-modal-actions .btn{width:100%;}
+}
+
+/* === Pulido modal de pago + rendimiento visual === */
+.payment-modal{
+  background:rgba(43,37,52,.42) !important;
+  backdrop-filter:blur(8px) saturate(110%) !important;
+}
+.payment-modal-card{
+  width:min(650px,calc(100% - 28px)) !important;
+  padding:34px 38px 36px !important;
+  border-radius:34px !important;
+  border:1px solid rgba(255,183,214,.72) !important;
+  background:linear-gradient(180deg,#fff 0%,#fff8fb 100%) !important;
+  box-shadow:0 34px 100px rgba(47,41,57,.22), 0 0 0 1px rgba(255,255,255,.65) inset !important;
+}
+.payment-modal-card .section-tag{ margin-bottom:18px !important; }
+.payment-modal-card h3{
+  margin:0 !important;
+  font-size:clamp(2rem,4vw,3rem) !important;
+  line-height:1.05 !important;
+  letter-spacing:-.02em !important;
+}
+.payment-modal-card h3::after{
+  content:"";
+  display:block;
+  width:100%;
+  max-width:420px;
+  height:1px;
+  margin:22px auto 20px;
+  background:linear-gradient(90deg,rgba(248,95,165,0),rgba(248,95,165,.36),rgba(248,95,165,0));
+}
+.payment-modal-summary{
+  max-width:440px !important;
+  margin:0 auto 24px !important;
+  padding:0 !important;
+  gap:7px !important;
+  color:#756e84 !important;
+  font-size:1.02rem !important;
+}
+.payment-modal-summary strong{
+  font-size:1.2rem !important;
+  margin-bottom:4px !important;
+}
+.payment-modal-actions{ gap:14px !important; margin-top:6px !important; }
+.payment-modal-actions .btn{
+  min-width:190px !important;
+  justify-content:center !important;
+  box-shadow:0 12px 25px rgba(248,95,165,.14);
+}
+.payment-modal-actions .btn-secondary{
+  box-shadow:none !important;
+  border-width:2px !important;
+}
+.payment-modal-note{
+  max-width:500px !important;
+  margin:20px auto 0 !important;
+  padding-top:16px !important;
+  border-top:1px solid rgba(234,223,241,.9) !important;
+  font-size:.92rem !important;
+  line-height:1.45 !important;
+}
+.payment-modal-close{
+  background:transparent !important;
+  color:#756e84 !important;
+  font-weight:900 !important;
+  transition:transform .18s ease, color .18s ease, background .18s ease;
+}
+.payment-modal-close:hover{
+  transform:scale(1.06);
+  color:#30293a !important;
+  background:#fff1f7 !important;
+}
+.pack-real-image{ content-visibility:auto; }
+@media (max-width:640px){
+  .payment-modal{align-items:flex-end !important; padding:12px !important;}
+  .payment-modal-card{padding:30px 20px 24px !important; border-radius:28px !important;}
+  .payment-modal-note{font-size:.86rem !important;}
+}
+
+/* === Pulido final modal de pago: limpio, premium y sin texto interno === */
+.payment-modal{
+  animation: paymentFadeIn .18s ease-out both !important;
+}
+.payment-modal-card{
+  transform-origin: center center;
+  animation: paymentCardIn .24s cubic-bezier(.2,.8,.2,1) both !important;
+}
+.payment-modal-summary{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
+.payment-modal-summary span b{
+  color:#3a3146 !important;
+  font-weight:900 !important;
+}
+.payment-modal-actions .btn{
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease !important;
+}
+.payment-modal-actions .btn:hover{
+  transform: translateY(-2px) !important;
+}
+.payment-modal-actions .btn:active{
+  transform: translateY(0) scale(.98) !important;
+}
+.payment-modal-actions .btn-primary:hover{
+  box-shadow:0 16px 34px rgba(248,95,165,.24) !important;
+}
+.payment-modal-actions .btn-secondary:hover{
+  border-color:#f85fa5 !important;
+  background:#fff7fb !important;
+}
+.payment-modal-note{
+  max-width:none !important;
+  width:auto !important;
+  display:inline-block !important;
+  margin:18px auto 0 !important;
+  padding:8px 14px !important;
+  border-top:0 !important;
+  border-radius:999px !important;
+  background:#fff1f7 !important;
+  border:1px solid #ffd3e6 !important;
+  color:#7a7188 !important;
+  font-size:.9rem !important;
+  font-weight:800 !important;
+  line-height:1.25 !important;
+}
+@keyframes paymentFadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+@keyframes paymentCardIn{
+  from{opacity:0; transform:translateY(14px) scale(.985);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+@media (prefers-reduced-motion: reduce){
+  .payment-modal,
+  .payment-modal-card,
+  .payment-modal-actions .btn,
+  .payment-modal-close{
+    animation:none !important;
+    transition:none !important;
+  }
+}
+
+/* === Ajuste final modal premium + contacto === */
+.payment-modal-card h3::after{
+  max-width:360px !important;
+  margin:18px auto 18px !important;
+  background:linear-gradient(90deg,rgba(234,223,241,0),rgba(234,223,241,.95),rgba(234,223,241,0)) !important;
+}
+.payment-modal-summary{
+  max-width:390px !important;
+  margin-bottom:20px !important;
+  gap:5px !important;
+  line-height:1.38 !important;
+}
+.payment-modal-summary strong{
+  margin-bottom:8px !important;
+}
+.payment-modal-actions{
+  margin-top:18px !important;
+}
+.payment-modal-actions .btn-secondary{
+  border-color:#e5d8ee !important;
+  color:#30293a !important;
+  background:#fff !important;
+}
+.payment-modal-actions .btn-secondary:hover{
+  border-color:#f85fa5 !important;
+  background:#fff7fb !important;
+  box-shadow:0 10px 24px rgba(248,95,165,.10) !important;
+}
+.payment-modal-note{
+  margin-top:16px !important;
+  color:#7a7188 !important;
+  background:#fff7fb !important;
+}
+.footer-col h4{
+  display:inline-block;
+}
+.footer-col a[href*="wa.me"]{
+  cursor:pointer;
+}
+@media (max-width:640px){
+  .payment-modal-summary{max-width:100% !important;}
+  .payment-modal-card h3::after{max-width:260px !important;}
 }
