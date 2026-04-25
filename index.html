@@ -183,11 +183,11 @@
             </div>
 
             <div class="selector-block">
-              <label>Nombre del peque</label>
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
               <input type="text" id="name-guarderia" placeholder="Ej. Mateo">
 
               <label>Talla</label>
-              <select id="size-guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
+              <select id="size-guarderia" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('guarderia')">
                 <option>0-6 meses</option>
                 <option>6-12 meses</option>
                 <option>12-18 meses</option>
@@ -195,18 +195,24 @@
               </select>
 
               <label>Temporada</label>
-              <select id="season-guarderia" class="season-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
+              <select id="season-guarderia" class="season-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('guarderia')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
-<label>Estilo del pack</label>
-              <select id="style-guarderia" class="style-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack('guarderia')">
-                <option value="basico">Básico neutro</option>
-                <option value="suave">Colores suaves</option>
-                <option value="ilustrado">Ilustrado divertido</option>
+</div><div class="config-block config-block-choice"><div class="config-block-title">Elige cómo quieres el pack</div><p class="config-block-note">Adaptamos las prendas, colores e interiores según el estilo y tipo de pack.</p><label>Estilo del pack</label>
+              <select id="style-guarderia" class="style-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('guarderia')">
+                <option value="basico">Neutro</option>
+                <option value="suave">Tierra</option>
+                <option value="ilustrado">Divertido</option>
+              </select>
+              <label for="type-guarderia">Tipo de pack</label>
+              <select id="type-guarderia" class="type-select" data-pack="guarderia" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('guarderia')">
+                <option value="unisex">Unisex</option>
+                <option value="nino">Niño</option>
+                <option value="nina">Niña</option>
               </select>
 
-              <label>Extras</label>
+              </div><div class="config-block config-block-extras"><div class="config-block-title extras-title">Añade extras <span>(opcional)</span></div>
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+4€)" data-pack="guarderia"> Pack calcetines (+4€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+6€)" data-pack="guarderia"> Segunda bolsa personalizada (+6€)</label>
@@ -218,8 +224,8 @@
               </div>
             </div>
 
-            <div class="product-bottom">
-              <div>
+            <div class="product-bottom product-bottom-centered">
+              <div class="price-box">
                 <small>Precio</small>
                 <div class="price">39,90 €</div>
               </div>
@@ -255,29 +261,35 @@
             </div>
 
             <div class="selector-block">
-              <label>Nombre del peque</label>
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
               <input type="text" id="name-infantil" placeholder="Ej. Lucía">
 
               <label>Talla</label>
-              <select id="size-infantil" onchange="window.mudalistaUpdatePack('infantil')">
+              <select id="size-infantil" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('infantil')">
                 <option>2-3 años</option>
                 <option>3-4 años</option>
                 <option>4-5 años</option>
               </select>
 
               <label>Temporada</label>
-              <select id="season-infantil" class="season-select" data-pack="infantil" onchange="window.mudalistaUpdatePack('infantil')">
+              <select id="season-infantil" class="season-select" data-pack="infantil" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('infantil')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
-<label>Estilo del pack</label>
-              <select id="style-infantil" class="style-select" data-pack="infantil" onchange="window.mudalistaUpdatePack('infantil')">
-                <option value="basico">Básico neutro</option>
-                <option value="suave">Colores suaves</option>
-                <option value="ilustrado">Ilustrado divertido</option>
+</div><div class="config-block config-block-choice"><div class="config-block-title">Elige cómo quieres el pack</div><p class="config-block-note">Adaptamos las prendas, colores e interiores según el estilo y tipo de pack.</p><label>Estilo del pack</label>
+              <select id="style-infantil" class="style-select" data-pack="infantil" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('infantil')">
+                <option value="basico">Neutro</option>
+                <option value="suave">Tierra</option>
+                <option value="ilustrado">Divertido</option>
               </select>
+              <label for="type-infantil">Tipo de pack</label>
+              <select id="type-infantil" class="type-select" data-pack="infantil" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('infantil')">
+                <option value="">Selecciona tipo</option>
+                <option value="nino">Niño</option>
+                <option value="nina">Niña</option>
+            </select>
 
-              <label>Extras</label>
+              </div><div class="config-block config-block-extras"><div class="config-block-title extras-title">Añade extras <span>(opcional)</span></div>
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+4€)" data-pack="infantil"> Pack calcetines (+4€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+6€)" data-pack="infantil"> Segunda bolsa personalizada (+6€)</label>
@@ -289,8 +301,8 @@
               </div>
             </div>
 
-            <div class="product-bottom">
-              <div>
+            <div class="product-bottom product-bottom-centered">
+              <div class="price-box">
                 <small>Precio</small>
                 <div class="price">44,90 €</div>
               </div>
@@ -325,29 +337,35 @@
             </div>
 
             <div class="selector-block">
-              <label>Nombre del peque</label>
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
               <input type="text" id="name-completo" placeholder="Ej. Hugo">
 
               <label>Talla</label>
-              <select id="size-completo" onchange="window.mudalistaUpdatePack('completo')">
+              <select id="size-completo" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('completo')">
                 <option>5-6 años</option>
                 <option>6-7 años</option>
                 <option>7-8 años</option>
               </select>
 
               <label>Temporada</label>
-              <select id="season-completo" class="season-select" data-pack="completo" onchange="window.mudalistaUpdatePack('completo')">
+              <select id="season-completo" class="season-select" data-pack="completo" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('completo')">
                 <option value="pv">Primavera / Verano</option>
                 <option value="oi">Otoño / Invierno</option>
               </select>
-<label>Estilo del pack</label>
-              <select id="style-completo" class="style-select" data-pack="completo" onchange="window.mudalistaUpdatePack('completo')">
-                <option value="basico">Básico neutro</option>
-                <option value="suave">Colores suaves</option>
-                <option value="ilustrado">Ilustrado divertido</option>
+</div><div class="config-block config-block-choice"><div class="config-block-title">Elige cómo quieres el pack</div><p class="config-block-note">Adaptamos las prendas, colores e interiores según el estilo y tipo de pack.</p><label>Estilo del pack</label>
+              <select id="style-completo" class="style-select" data-pack="completo" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('completo')">
+                <option value="basico">Neutro</option>
+                <option value="suave">Tierra</option>
+                <option value="ilustrado">Divertido</option>
               </select>
+              <label for="type-completo">Tipo de pack</label>
+              <select id="type-completo" class="type-select" data-pack="completo" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('completo')">
+                <option value="">Selecciona tipo</option>
+                <option value="nino">Niño</option>
+                <option value="nina">Niña</option>
+            </select>
 
-              <label>Extras</label>
+              </div><div class="config-block config-block-extras"><div class="config-block-title extras-title">Añade extras <span>(opcional)</span></div>
               <div class="extras-grid">
                 <label class="check-option"><input type="checkbox" value="Pack calcetines (+4€)" data-pack="completo"> Pack calcetines (+4€)</label>
                 <label class="check-option"><input type="checkbox" value="Segunda bolsa personalizada (+6€)" data-pack="completo"> Segunda bolsa personalizada (+6€)</label>
@@ -359,8 +377,8 @@
               </div>
             </div>
 
-            <div class="product-bottom">
-              <div>
+            <div class="product-bottom product-bottom-centered">
+              <div class="price-box">
                 <small>Precio</small>
                 <div class="price">59,90 €</div>
               </div>
@@ -456,7 +474,7 @@
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">¿Qué significa “estilo del pack”?</button>
-            <div class="faq-answer"><p>Es la línea visual de la ropa: Básico neutro, Colores suaves o Ilustrado divertido. Así eliges estética sin multiplicar packs.</p></div>
+            <div class="faq-answer"><p>Es la línea visual de la ropa: Neutro, Tierra o Divertido. Así eliges estética sin multiplicar packs.</p></div>
           </div>
           <div class="faq-item">
             <button class="faq-question">¿Qué incluye el segundo nombre o apellido en bolsa?</button>
@@ -541,7 +559,6 @@
     <p>© 2026 MudaLista · Packs de muda personalizados</p>
   </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>

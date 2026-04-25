@@ -1,8 +1,8 @@
-/* MudaLista selector engine - final integrado */
+/* MudaLista - versión reparada con Tipo de pack */
 (function () {
   const WHATSAPP_PHONE = "34600000000";
 
-  const PACKS = {
+  const CONTENT = {
     guarderia: {
       pv: {
         "0-6 meses": [
@@ -71,7 +71,6 @@
         ]
       }
     },
-
     infantil: {
       pv: [
         "3 camisetas",
@@ -90,7 +89,6 @@
         "1 bolsa personalizada"
       ]
     },
-
     completo: {
       pv: [
         "4 camisetas",
@@ -126,55 +124,126 @@
     }
   };
 
-  function el(id) {
+  function byId(id) {
     return document.getElementById(id);
   }
 
-  function listEl(pack) {
+  function valueOf(id, fallback) {
+    const node = byId(id);
+    return node ? node.value : fallback;
+  }
+
+  function textOf(id, fallback) {
+    const node = byId(id);
+    return node && node.selectedIndex >= 0 ? node.options[node.selectedIndex].textContent.trim() : fallback;
+  }
+
+  function listFor(pack) {
     return document.querySelector('[data-pack-list="' + pack + '"]');
   }
 
   function getSeason(pack) {
-    const node = el("season-" + pack);
-    return node ? node.value : "pv";
+    return valueOf("season-" + pack, "pv");
   }
 
   function getSize(pack) {
-    const node = el("size-" + pack);
-    return node ? node.value : "";
+    return valueOf("size-" + pack, "");
   }
 
   function getStyle(pack) {
-    const node = el("style-" + pack);
-    return node ? node.value : "basico";
+    return valueOf("style-" + pack, "basico");
   }
 
-  function packItems(pack) {
+  function getType(pack) {
+    return valueOf("type-" + pack, "unisex");
+  }
+
+  function baseItems(pack) {
     const season = getSeason(pack);
 
     if (pack === "guarderia") {
       const age = getSize("guarderia") || "0-6 meses";
-      return (PACKS.guarderia[season] && PACKS.guarderia[season][age]) || PACKS.guarderia.pv["0-6 meses"];
+      const items = CONTENT.guarderia[season] && CONTENT.guarderia[season][age];
+      return (items || CONTENT.guarderia.pv["0-6 meses"]).slice();
     }
 
-    return (PACKS[pack] && PACKS[pack][season]) || [];
+    const items = CONTENT[pack] && CONTENT[pack][season];
+    return items ? items.slice() : [];
   }
 
-  function renderPack(pack) {
-    const list = listEl(pack);
-    if (list) {
-      list.innerHTML = packItems(pack).map(function (item) {
+  function applyType(items, pack) {
+    const type = getType(pack);
+    if(!type) return items;
+
+    return items.map(function (item) {
+      let text = item;
+
+      if (type === "nina") {
+        text = text
+          .replace("2 pantalones ligeros / leggings finos", "2 leggings o pantalones suaves")
+          .replace("2 pantalones ligeros / shorts", "2 leggings o pantalones suaves")
+          .replace("2 pantalones de algodón grueso / felpa", "2 leggings o pantalones de algodón grueso")
+          .replace("2 pantalones más gruesos", "2 leggings o pantalones más gruesos")
+          .replace("2 pantalones", "2 leggings o pantalones suaves")
+          .replace("4 prendas de ropa interior", "4 braguitas")
+          .replace("5 prendas de ropa interior", "5 braguitas");
+      }
+
+      if (type === "nino") {
+        text = text
+          .replace("2 pantalones ligeros / leggings finos", "2 pantalones suaves")
+          .replace("2 leggings o pantalones suaves", "2 pantalones suaves")
+          .replace("2 leggings o pantalones de algodón grueso", "2 pantalones de algodón grueso / felpa")
+          .replace("2 leggings o pantalones más gruesos", "2 pantalones más gruesos")
+          .replace("4 prendas de ropa interior", "4 calzoncillos")
+          .replace("5 prendas de ropa interior", "5 calzoncillos");
+      }
+
+      return text;
+    });
+  }
+
+  function packItems(pack) {
+    return applyType(baseItems(pack), pack);
+  }
+
+  function renderContent(pack) {
+    const list = listFor(pack);
+    if (!list) return;
+
+    list.innerHTML = packItems(pack)
+      .map(function (item) {
         return "<li>" + item + "</li>";
-      }).join("");
+      })
+      .join("");
+  }
+
+  function findImage(pack) {
+    return document.querySelector('[data-pack-image="' + pack + '"]') ||
+           byId("photo-" + pack) ||
+           document.querySelector("#pack-" + pack + " img") ||
+           document.querySelector('[id*="' + pack + '"] img');
+  }
+
+  function updateImage(pack) {
+    const img = findImage(pack);
+    if (!img) return;
+
+    const season = getSeason(pack);
+    const style = getStyle(pack);
+
+    if (pack === "guarderia" && getSize("guarderia") === "0-6 meses" && season === "pv" && style === "suave") {
+      img.src = "assets/guarderia_0-6_tierra.jpg";
+      return;
     }
 
-    const img = document.querySelector('[data-pack-image="' + pack + '"]') || el("photo-" + pack);
-    const src = IMAGE_MAP[pack] && IMAGE_MAP[pack][getSeason(pack)] && IMAGE_MAP[pack][getSeason(pack)][getStyle(pack)];
-    if (img && src) img.src = src;
+    const src = IMAGE_MAP[pack] && IMAGE_MAP[pack][season] && IMAGE_MAP[pack][season][style];
+    if (src) img.src = src;
   }
 
   function updatePack(pack) {
-    renderPack(pack);
+    renderContent(pack);
+    updateImage(pack);
   }
 
   function updateAll() {
@@ -186,13 +255,13 @@
   window.updateAllPackContents = updateAll;
   window.updateGuarderiaPack = function () { updatePack("guarderia"); };
 
-  function setupSelectors() {
+  function setupSelectorEvents() {
     ["guarderia", "infantil", "completo"].forEach(function (pack) {
-      ["size", "season", "style"].forEach(function (field) {
-        const node = el(field + "-" + pack);
+      ["size", "season", "style", "type"].forEach(function (field) {
+        const node = byId(field + "-" + pack);
         if (node) {
-          node.onchange = function () { updatePack(pack); };
-          node.oninput = function () { updatePack(pack); };
+          node.addEventListener("change", function () { updatePack(pack); });
+          node.addEventListener("input", function () { updatePack(pack); });
         }
       });
     });
@@ -205,8 +274,8 @@
   }
 
   function getSecondNameDetail(pack) {
-    const checkbox = el("second-name-" + pack);
-    const input = el("second-name-value-" + pack);
+    const checkbox = byId("second-name-" + pack);
+    const input = byId("second-name-value-" + pack);
 
     if (checkbox && checkbox.checked) {
       return input && input.value.trim()
@@ -219,19 +288,19 @@
 
   function setupOrders() {
     document.querySelectorAll(".order-btn").forEach(function (button) {
-      button.onclick = function () {
+      button.addEventListener("click", function () {
         const pack = button.dataset.packKey;
         const packName = button.dataset.packName || pack;
-        const nameNode = el(button.dataset.nameId);
-        const sizeNode = el(button.dataset.sizeId);
-        const seasonNode = el(button.dataset.seasonId);
-        const styleNode = el(button.dataset.styleId);
+        const nameNode = byId(button.dataset.nameId);
+        const sizeNode = byId(button.dataset.sizeId);
+        const seasonNode = byId(button.dataset.seasonId);
+        const styleNode = byId(button.dataset.styleId);
 
         const name = nameNode && nameNode.value.trim() ? nameNode.value.trim() : "Pendiente de confirmar";
         const selectedSize = sizeNode ? sizeNode.value : "Pendiente de confirmar";
         const selectedSeason = seasonNode ? seasonNode.options[seasonNode.selectedIndex].text : "Pendiente de confirmar";
         const selectedStyle = styleNode ? styleNode.options[styleNode.selectedIndex].text : "Pendiente de confirmar";
-        const content = packItems(pack).join(", ");
+        const selectedType = textOf("type-" + pack, "Unisex");
         const extras = getCheckedExtras(pack);
         const extrasText = extras.length ? extras.join(", ") : "Sin extras";
 
@@ -240,8 +309,9 @@
 Nombre del peque: ${name}
 Talla: ${selectedSize}
 Temporada: ${selectedSeason}
+Tipo de pack: ${selectedType}
 Estilo del pack: ${selectedStyle}
-Contenido del pack: ${content}
+Contenido del pack: ${packItems(pack).join(", ")}
 Extras: ${extrasText}
 Detalle: ${getSecondNameDetail(pack)}
 Precio base del pack: ${button.dataset.basePrice}
@@ -249,44 +319,45 @@ Precio base del pack: ${button.dataset.basePrice}
 Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.`;
 
         window.open("https://wa.me/" + WHATSAPP_PHONE + "?text=" + encodeURIComponent(message), "_blank");
-      };
+      });
     });
   }
 
   function setupMisc() {
-    const menuBtn = el("menuBtn");
-    const mobileMenu = el("mobileMenu");
+    const menuBtn = byId("menuBtn");
+    const mobileMenu = byId("mobileMenu");
 
     if (menuBtn && mobileMenu) {
-      menuBtn.onclick = function () {
+      menuBtn.addEventListener("click", function () {
         const open = mobileMenu.style.display === "block";
         mobileMenu.style.display = open ? "none" : "block";
         menuBtn.setAttribute("aria-expanded", String(!open));
-      };
+      });
     }
 
     document.querySelectorAll("[data-toggle-target]").forEach(function (input) {
-      input.onchange = function () {
-        const target = el(input.dataset.toggleTarget);
+      input.addEventListener("change", function () {
+        const target = byId(input.dataset.toggleTarget);
         if (target) target.classList.toggle("is-visible", input.checked);
-      };
+      });
     });
 
     document.querySelectorAll(".faq-question").forEach(function (button) {
-      button.onclick = function () {
+      button.addEventListener("click", function () {
         const answer = button.nextElementSibling;
         if (!answer) return;
+
         const open = answer.style.maxHeight && answer.style.maxHeight !== "0px";
         document.querySelectorAll(".faq-answer").forEach(function (item) {
           if (item !== answer) item.style.maxHeight = null;
         });
         answer.style.maxHeight = open ? null : answer.scrollHeight + "px";
-      };
+      });
     });
   }
 
   function init() {
-    setupSelectors();
+    setupSelectorEvents();
     setupOrders();
     setupMisc();
     updateAll();
