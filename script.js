@@ -371,3 +371,82 @@ Quiero confirmar disponibilidad, plazo de preparación y método de pago seguro.
 
   window.addEventListener("pageshow", updateAll);
 })();
+
+
+/* === Sistema limpio final de imágenes por estilo === */
+(function () {
+  const STYLE_IMAGE_RULES = {
+    guarderia: [
+      {
+        size: "0-6 meses",
+        season: "pv",
+        style: "suave",
+        src: "assets/guarderia_0-6_tierra.jpg"
+      }
+    ]
+  };
+
+  function byIdSafe(id) {
+    return document.getElementById(id);
+  }
+
+  function valueSafe(id, fallback) {
+    const node = byIdSafe(id);
+    return node ? node.value : fallback;
+  }
+
+  function findPackImage(pack) {
+    return document.querySelector('[data-pack-image="' + pack + '"]') ||
+           document.getElementById("photo-" + pack) ||
+           document.querySelector("#pack-" + pack + " img") ||
+           document.querySelector('[id*="' + pack + '"] img');
+  }
+
+  function applyStyleImage(pack) {
+    const img = findPackImage(pack);
+    if (!img) return;
+
+    const rules = STYLE_IMAGE_RULES[pack] || [];
+    const size = valueSafe("size-" + pack, "");
+    const season = valueSafe("season-" + pack, "");
+    const style = valueSafe("style-" + pack, "");
+
+    const match = rules.find(function (rule) {
+      return (!rule.size || rule.size === size) &&
+             (!rule.season || rule.season === season) &&
+             (!rule.style || rule.style === style);
+    });
+
+    if (match) {
+      img.src = match.src;
+    }
+  }
+
+  function applyAllStyleImages() {
+    ["guarderia", "infantil", "completo"].forEach(applyStyleImage);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    ["guarderia", "infantil", "completo"].forEach(function (pack) {
+      ["size", "season", "style", "type"].forEach(function (field) {
+        const node = byIdSafe(field + "-" + pack);
+        if (node) {
+          node.addEventListener("change", function () {
+            setTimeout(function () { applyStyleImage(pack); }, 0);
+          });
+          node.addEventListener("input", function () {
+            setTimeout(function () { applyStyleImage(pack); }, 0);
+          });
+        }
+      });
+    });
+
+    setTimeout(applyAllStyleImages, 0);
+  });
+
+  window.addEventListener("pageshow", function () {
+    setTimeout(applyAllStyleImages, 0);
+  });
+
+  window.mudalistaApplyStyleImages = applyAllStyleImages;
+})();
