@@ -1,114 +1,114 @@
-/* MudaLista - versión reparada con Tipo de pack */
+/* MudaLista - repaired version with pack type */
 (function () {
   const CONTENT = {
     guarderia: {
       pv: {
-        "0-6 meses": [
-          "5 bodys de manga corta",
-          "2 pantalones ligeros / leggings finos",
-          "1 sudadera muy ligera o chaqueta fina",
-          "2 pares de calcetines",
-          "1 bolsa personalizada"
+        "0–6 months": [
+          "5 short-sleeve bodysuits",
+          "2 light trousers / thin leggings",
+          "1 very light sweatshirt or thin jacket",
+          "2 pairs of socks",
+          "1 personalised bag"
         ],
-        "6-12 meses": [
-          "4 bodys de manga corta",
-          "1 camiseta",
-          "2 pantalones ligeros / leggings finos",
-          "1 sudadera muy ligera o chaqueta fina",
-          "2 pares de calcetines",
-          "1 bolsa personalizada"
+        "6–12 months": [
+          "4 short-sleeve bodysuits",
+          "1 T-shirt",
+          "2 light trousers / thin leggings",
+          "1 very light sweatshirt or thin jacket",
+          "2 pairs of socks",
+          "1 personalised bag"
         ],
-        "12-18 meses": [
-          "2 bodys de manga corta",
-          "2 camisetas",
-          "2 pantalones ligeros / leggings finos",
-          "1 sudadera muy ligera o chaqueta fina",
-          "2 pares de calcetines",
-          "1 bolsa personalizada"
+        "12–18 months": [
+          "2 short-sleeve bodysuits",
+          "2 T-shirts",
+          "2 light trousers / thin leggings",
+          "1 very light sweatshirt or thin jacket",
+          "2 pairs of socks",
+          "1 personalised bag"
         ],
-        "18-24 meses": [
-          "2 bodys de manga corta",
-          "2 camisetas",
-          "2 pantalones ligeros / leggings finos",
-          "1 sudadera muy ligera o chaqueta fina",
-          "2 pares de calcetines",
-          "1 bolsa personalizada"
+        "18–24 months": [
+          "2 short-sleeve bodysuits",
+          "2 T-shirts",
+          "2 light trousers / thin leggings",
+          "1 very light sweatshirt or thin jacket",
+          "2 pairs of socks",
+          "1 personalised bag"
         ]
       },
       oi: {
-        "0-6 meses": [
-          "5 bodys de manga larga",
-          "2 pantalones más gruesos",
-          "1 sudadera o jersey",
-          "2 pares de calcetines gruesos",
-          "1 bolsa personalizada"
+        "0–6 months": [
+          "5 long-sleeve bodysuits",
+          "2 warmer trousers",
+          "1 sweatshirt or jumper",
+          "2 pairs of warm socks",
+          "1 personalised bag"
         ],
-        "6-12 meses": [
-          "4 bodys de manga larga",
-          "1 camiseta de manga larga",
-          "2 pantalones más gruesos",
-          "1 sudadera o jersey",
-          "2 pares de calcetines gruesos",
-          "1 bolsa personalizada"
+        "6–12 months": [
+          "4 long-sleeve bodysuits",
+          "1 long-sleeve T-shirt",
+          "2 warmer trousers",
+          "1 sweatshirt or jumper",
+          "2 pairs of warm socks",
+          "1 personalised bag"
         ],
-        "12-18 meses": [
-          "2 bodys de manga larga",
-          "2 camisetas de manga larga",
-          "2 pantalones más gruesos",
-          "1 sudadera o jersey",
-          "2 pares de calcetines gruesos",
-          "1 bolsa personalizada"
+        "12–18 months": [
+          "2 long-sleeve bodysuits",
+          "2 long-sleeve T-shirts",
+          "2 warmer trousers",
+          "1 sweatshirt or jumper",
+          "2 pairs of warm socks",
+          "1 personalised bag"
         ],
-        "18-24 meses": [
-          "2 bodys de manga larga",
-          "2 camisetas de manga larga",
-          "2 pantalones más gruesos",
-          "1 sudadera o jersey",
-          "2 pares de calcetines gruesos",
-          "1 bolsa personalizada"
+        "18–24 months": [
+          "2 long-sleeve bodysuits",
+          "2 long-sleeve T-shirts",
+          "2 warmer trousers",
+          "1 sweatshirt or jumper",
+          "2 pairs of warm socks",
+          "1 personalised bag"
         ]
       }
     },
     infantil: {
       pv: [
-        "3 camisetas",
-        "2 pantalones ligeros / shorts",
-        "1 sudadera ligera",
-        "4 prendas de ropa interior",
-        "3 pares de calcetines",
-        "1 bolsa personalizada"
+        "3 T-shirts",
+        "2 light trousers / shorts",
+        "1 light sweatshirt",
+        "4 underwear items",
+        "3 pairs of socks",
+        "1 personalised bag"
       ],
       oi: [
-        "3 camisetas de manga larga",
-        "2 pantalones de algodón grueso / felpa",
-        "1 sudadera o jersey",
-        "4 prendas de ropa interior",
-        "3 pares de calcetines",
-        "1 bolsa personalizada"
+        "3 long-sleeve T-shirts",
+        "2 thick cotton / fleece trousers",
+        "1 sweatshirt or jumper",
+        "4 underwear items",
+        "3 pairs of socks",
+        "1 personalised bag"
       ]
     },
     completo: {
       pv: [
-        "4 camisetas",
-        "2 pantalones ligeros / shorts",
-        "1 sudadera ligera",
-        "5 prendas de ropa interior",
-        "5 pares de calcetines",
-        "1 bolsa personalizada"
+        "4 T-shirts",
+        "2 light trousers / shorts",
+        "1 light sweatshirt",
+        "5 underwear items",
+        "5 pairs of socks",
+        "1 personalised bag"
       ],
       oi: [
-        "4 camisetas de manga larga",
-        "2 pantalones",
-        "1 sudadera más cálida",
-        "5 prendas de ropa interior",
-        "5 pares de calcetines",
-        "1 bolsa personalizada"
+        "4 long-sleeve T-shirts",
+        "2 trousers",
+        "1 warmer sweatshirt",
+        "5 underwear items",
+        "5 pairs of socks",
+        "1 personalised bag"
       ]
     }
   };
 
-  // Enlaces reales de pago. Sustituye estos valores por tus Payment Links de Stripe
-  // y por el enlace/instrucción de Bizum de tu banco cuando lo tengas activo.
+  // Real payment links. Replace these values with your Stripe Payment Links
+  // and with your bank Bizum link/instructions when active.
   const PAYMENT_LINKS = {
     guarderia: "",
     infantil: "",
@@ -122,11 +122,11 @@
   };
 
 
-  // Control sencillo de stock por combinación.
-  // Por defecto todo aparece disponible. Para bloquear una combinación, añade:
-  // "infantil|3-4 años|pv|nino": false
+  // Simple stock control by combination.
+  // By default everything is available. To block a combination, add:
+  // "infantil|3–4 years|pv|nino": false
   const STOCK = {
-    // Ejemplo desactivado: "infantil|3-4 años|pv|nino": false
+    // Disabled example: "infantil|3–4 years|pv|nino": false
   };
 
   function stockKey(pack) {
@@ -244,16 +244,16 @@
       }
       setSecondNameState(pack, true);
 
-      // No recortamos mientras escribe para que pueda poner espacios con normalidad.
-      // Al salir del campo, separamos el primer nombre del segundo/apellidos.
+      // We do not trim while typing, so spaces can be entered normally.
+      // On blur, we separate the first name from the second name/surname.
       if (options && options.commit) main.value = parts[0];
       return;
     }
 
     if (options && options.commit) main.value = raw.trim();
 
-    // Si el extra se había generado automáticamente desde este campo y el usuario
-    // borra el segundo nombre/apellido, también se borra de extras y deja de sumar.
+    // If the extra was automatically generated from this field and the user
+    // deletes the second name/surname, it is also removed from extras and stops adding to the total.
     if (extra && extra.dataset.autoFromMain === "true") {
       extra.value = "";
       delete extra.dataset.autoFromMain;
@@ -291,9 +291,9 @@
     const season = getSeason(pack);
 
     if (pack === "guarderia") {
-      const age = getSize("guarderia") || "0-6 meses";
+      const age = getSize("guarderia") || "0–6 months";
       const items = CONTENT.guarderia[season] && CONTENT.guarderia[season][age];
-      return (items || CONTENT.guarderia.pv["0-6 meses"]).slice();
+      return (items || CONTENT.guarderia.pv["0–6 months"]).slice();
     }
 
     const items = CONTENT[pack] && CONTENT[pack][season];
@@ -309,23 +309,23 @@
 
       if (type === "nina") {
         text = text
-          .replace("2 pantalones ligeros / leggings finos", "2 leggings o pantalones suaves")
-          .replace("2 pantalones ligeros / shorts", "2 leggings o pantalones suaves")
-          .replace("2 pantalones de algodón grueso / felpa", "2 leggings o pantalones de algodón grueso")
-          .replace("2 pantalones más gruesos", "2 leggings o pantalones más gruesos")
-          .replace("2 pantalones", "2 leggings o pantalones suaves")
-          .replace("4 prendas de ropa interior", "4 braguitas")
-          .replace("5 prendas de ropa interior", "5 braguitas");
+          .replace("2 light trousers / thin leggings", "2 leggings or soft trousers")
+          .replace("2 light trousers / shorts", "2 leggings or soft trousers")
+          .replace("2 thick cotton / fleece trousers", "2 leggings or thick cotton trousers")
+          .replace("2 warmer trousers", "2 leggings or warmer trousers")
+          .replace("2 trousers", "2 leggings or soft trousers")
+          .replace("4 underwear items", "4 girls’ briefs")
+          .replace("5 underwear items", "5 girls’ briefs");
       }
 
       if (type === "nino") {
         text = text
-          .replace("2 pantalones ligeros / leggings finos", "2 pantalones suaves")
-          .replace("2 leggings o pantalones suaves", "2 pantalones suaves")
-          .replace("2 leggings o pantalones de algodón grueso", "2 pantalones de algodón grueso / felpa")
-          .replace("2 leggings o pantalones más gruesos", "2 pantalones más gruesos")
-          .replace("4 prendas de ropa interior", "4 calzoncillos")
-          .replace("5 prendas de ropa interior", "5 calzoncillos");
+          .replace("2 light trousers / thin leggings", "2 trousers suaves")
+          .replace("2 leggings or soft trousers", "2 trousers suaves")
+          .replace("2 leggings or thick cotton trousers", "2 thick cotton / fleece trousers")
+          .replace("2 leggings or warmer trousers", "2 warmer trousers")
+          .replace("4 underwear items", "4 boys’ briefs")
+          .replace("5 underwear items", "5 boys’ briefs");
       }
 
       return text;
@@ -361,7 +361,7 @@
     const season = getSeason(pack);
     const style = getStyle(pack);
 
-    if (pack === "guarderia" && getSize("guarderia") === "0-6 meses" && season === "pv" && style === "suave") {
+    if (pack === "guarderia" && getSize("guarderia") === "0–6 months" && season === "pv" && style === "suave") {
       img.src = "assets/guarderia_0-6_tierra.webp";
       return;
     }
@@ -480,31 +480,31 @@
 
     const stripeUrl = PAYMENT_LINKS[details.pack] || "";
     const bizumUrl = BIZUM_LINKS[details.pack] || "";
-    const extras = details.extras.length ? details.extras.join(", ") : "Sin extras";
+    const extras = details.extras.length ? details.extras.join(", ") : "No extras";
 
     const modal = document.createElement("div");
     modal.id = "payment-modal";
     modal.className = "payment-modal";
     modal.innerHTML = '' +
       '<div class="payment-modal-card" role="dialog" aria-modal="true" aria-labelledby="payment-modal-title">' +
-        '<button class="payment-modal-close" type="button" aria-label="Cerrar">×</button>' +
-        '<span class="section-tag">Pago seguro</span>' +
-        '<h3 id="payment-modal-title">Finaliza tu pedido</h3>' +
+        '<button class="payment-modal-close" type="button" aria-label="Close">×</button>' +
+        '<span class="section-tag">Secure payment</span>' +
+        '<h3 id="payment-modal-title">Complete your order</h3>' +
         '<div class="payment-modal-summary">' +
           '<strong>' + escapeHTML(details.packName) + ' · ' + escapeHTML(details.price) + '</strong>' +
-          '<span><b>Nombre incluido:</b> ' + escapeHTML(details.name) + '</span>' +
-          '<span><b>Bolsa:</b> ' + escapeHTML(details.bagName || details.name) + '</span>' +
-          '<span><b>Talla:</b> ' + escapeHTML(details.size) + '</span>' +
-          '<span><b>Temporada:</b> ' + escapeHTML(details.season) + '</span>' +
-          '<span><b>Tipo:</b> ' + escapeHTML(details.type) + '</span>' +
-          '<span><b>Estilo:</b> ' + escapeHTML(details.style) + '</span>' +
+          '<span><b>Included name:</b> ' + escapeHTML(details.name) + '</span>' +
+          '<span><b>Bag:</b> ' + escapeHTML(details.bagName || details.name) + '</span>' +
+          '<span><b>Size:</b> ' + escapeHTML(details.size) + '</span>' +
+          '<span><b>Season:</b> ' + escapeHTML(details.season) + '</span>' +
+          '<span><b>Type:</b> ' + escapeHTML(details.type) + '</span>' +
+          '<span><b>Style:</b> ' + escapeHTML(details.style) + '</span>' +
           '<span><b>Extras:</b> ' + escapeHTML(extras) + '</span>' +
         '</div>' +
         '<div class="payment-modal-actions">' +
-          '<a class="btn btn-primary" data-payment="card" href="' + (stripeUrl || '#') + '" target="_blank" rel="noopener">Pagar con tarjeta</a>' +
-          '<a class="btn btn-secondary" data-payment="bizum" href="' + (bizumUrl || '#') + '" target="_blank" rel="noopener">Pagar con Bizum</a>' +
+          '<a class="btn btn-primary" data-payment="card" href="' + (stripeUrl || '#') + '" target="_blank" rel="noopener">Pay by card</a>' +
+          '<a class="btn btn-secondary" data-payment="bizum" href="' + (bizumUrl || '#') + '" target="_blank" rel="noopener">Pay by Bizum</a>' +
         '</div>' +
-        '<p class="payment-modal-note">Pago 100% seguro · Tarjeta o Bizum</p>' +
+        '<p class="payment-modal-note">100% secure payment · Card or Bizum</p>' +
       '</div>';
 
     document.body.appendChild(modal);
@@ -520,14 +520,14 @@
     if (!stripeUrl) {
       card.addEventListener("click", function (event) {
         event.preventDefault();
-        alert("Para activar el pago real con tarjeta, añade tu Payment Link de Stripe en PAYMENT_LINKS dentro de script.js.");
+        alert("To activate real card payments, add your Stripe Payment Link in PAYMENT_LINKS inside script.js.");
       });
     }
 
     if (!bizumUrl) {
       bizum.addEventListener("click", function (event) {
         event.preventDefault();
-        alert("Para activar Bizum, añade el enlace o instrucción de pago Bizum en BIZUM_LINKS dentro de script.js.");
+        alert("To activate Bizum, add your Bizum payment link or instruction in BIZUM_LINKS inside script.js.");
       });
     }
   }
@@ -555,23 +555,23 @@
         const typeNode = byId("type-" + pack);
         const missing = [];
 
-        if (!nameNode || !nameNode.value.trim()) missing.push("el nombre del peque");
-        if (!sizeNode || !sizeNode.value) missing.push("la talla");
-        if (!seasonNode || !seasonNode.value) missing.push("la temporada");
-        if (!styleNode || !styleNode.value) missing.push("el estilo");
-        if (!typeNode || !typeNode.value) missing.push("el tipo de pack");
+        if (!nameNode || !nameNode.value.trim()) missing.push("the child’s name");
+        if (!sizeNode || !sizeNode.value) missing.push("the size");
+        if (!seasonNode || !seasonNode.value) missing.push("the season");
+        if (!styleNode || !styleNode.value) missing.push("the style");
+        if (!typeNode || !typeNode.value) missing.push("the pack type");
         const secondNameCheckbox = byId("second-name-" + pack);
         const secondNameInput = byId("second-name-value-" + pack);
-        if (secondNameCheckbox && secondNameCheckbox.checked && (!secondNameInput || !secondNameInput.value.trim())) missing.push("el segundo nombre o apellido");
+        if (secondNameCheckbox && secondNameCheckbox.checked && (!secondNameInput || !secondNameInput.value.trim())) missing.push("the second name or surname");
 
         if (!isAvailable(pack)) {
-          alert("Ahora mismo no hay stock para esa combinación. Cambia talla, temporada o tipo de pack.");
+          alert("This combination is currently out of stock. Please change size, season or pack type.");
           updateAvailability(pack);
           return;
         }
 
         if (missing.length) {
-          alert("Antes de pagar, completa: " + missing.join(", ") + ".");
+          alert("Before paying, complete: " + missing.join(", ") + ".");
           const firstMissing = !nameNode || !nameNode.value.trim() ? nameNode : (!sizeNode || !sizeNode.value ? sizeNode : (!seasonNode || !seasonNode.value ? seasonNode : (!styleNode || !styleNode.value ? styleNode : typeNode)));
           if (firstMissing && firstMissing.focus) firstMissing.focus();
           return;
@@ -639,12 +639,12 @@
 })();
 
 
-/* === Sistema limpio final de imágenes por estilo === */
+/* === Final clean image system by style === */
 (function () {
   const STYLE_IMAGE_RULES = {
     guarderia: [
       {
-        size: "0-6 meses",
+        size: "0–6 months",
         season: "pv",
         style: "suave",
         src: "assets/guarderia_0-6_tierra.webp"

@@ -16,7 +16,8 @@
   <div class="visual-blob blob-three"></div>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand">MudaLista</a>
+      <a href="index.html" class="brand">MudaLista</a>
+      <div class="lang-switch" aria-label="Selector de idioma"><a href="index.html" class="active">ES</a><a href="index-en.html">EN</a></div>
 
       <nav class="desktop-nav">
         <a href="#packs">Packs</a>
@@ -42,6 +43,7 @@
       <a href="#para-quien">Para quién</a>
       <a href="#faq">FAQ</a>
       <a href="#footer-contacto">Contacto</a>
+      <a href="index-en.html">English</a>
       <a href="#packs" class="btn btn-primary mobile-cta">Comprar mi pack</a>
     </div>
   </header>
@@ -182,8 +184,9 @@
             </div>
 
             <div class="selector-block">
-              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
-              <input type="text" id="name-guarderia" placeholder="Ej. Mateo">
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label for="name-guarderia">Nombre para la bolsa <span class="label-note">(1 nombre incluido)</span></label>
+              <input type="text" id="name-guarderia" placeholder="Ej. Mateo" maxlength="18" autocomplete="given-name">
+              <p class="field-help">Si quieres añadir segundo nombre o apellidos, se aplicará el extra de personalización (+3€).</p>
 
               <label>Talla</label>
               <select id="size-guarderia" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('guarderia')">
@@ -218,7 +221,7 @@
                 <label class="check-option"><input type="checkbox" id="second-name-guarderia" value="Segundo nombre o apellido en bolsa (+3€)" data-pack="guarderia" data-toggle-target="second-name-field-guarderia"> Segundo nombre o apellido en bolsa (+3€)</label>
                 <div class="extra-field" id="second-name-field-guarderia">
                   <label>Segundo nombre / apellido para la bolsa</label>
-                  <input type="text" id="second-name-value-guarderia" placeholder="Ej. Martín">
+                  <input type="text" id="second-name-value-guarderia" placeholder="Ej. Martín / García" maxlength="28" autocomplete="additional-name">
                 </div>
               </div>
             </div>
@@ -259,8 +262,9 @@
             </div>
 
             <div class="selector-block">
-              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
-              <input type="text" id="name-infantil" placeholder="Ej. Lucía">
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label for="name-infantil">Nombre para la bolsa <span class="label-note">(1 nombre incluido)</span></label>
+              <input type="text" id="name-infantil" placeholder="Ej. Lucía" maxlength="18" autocomplete="given-name">
+              <p class="field-help">Si quieres añadir segundo nombre o apellidos, se aplicará el extra de personalización (+3€).</p>
 
               <label>Talla</label>
               <select id="size-infantil" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('infantil')">
@@ -294,7 +298,7 @@
                 <label class="check-option"><input type="checkbox" id="second-name-infantil" value="Segundo nombre o apellido en bolsa (+3€)" data-pack="infantil" data-toggle-target="second-name-field-infantil"> Segundo nombre o apellido en bolsa (+3€)</label>
                 <div class="extra-field" id="second-name-field-infantil">
                   <label>Segundo nombre / apellido para la bolsa</label>
-                  <input type="text" id="second-name-value-infantil" placeholder="Ej. Martín">
+                  <input type="text" id="second-name-value-infantil" placeholder="Ej. Martín / García" maxlength="28" autocomplete="additional-name">
                 </div>
               </div>
             </div>
@@ -334,8 +338,9 @@
             </div>
 
             <div class="selector-block">
-              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label>Nombre del peque</label>
-              <input type="text" id="name-completo" placeholder="Ej. Hugo">
+              <div class="config-block config-block-basic"><div class="config-block-title">Datos del peque</div><label for="name-completo">Nombre para la bolsa <span class="label-note">(1 nombre incluido)</span></label>
+              <input type="text" id="name-completo" placeholder="Ej. Hugo" maxlength="18" autocomplete="given-name">
+              <p class="field-help">Si quieres añadir segundo nombre o apellidos, se aplicará el extra de personalización (+3€).</p>
 
               <label>Talla</label>
               <select id="size-completo" onchange="window.mudalistaUpdatePack && window.mudalistaUpdatePack('completo')">
@@ -369,7 +374,7 @@
                 <label class="check-option"><input type="checkbox" id="second-name-completo" value="Segundo nombre o apellido en bolsa (+3€)" data-pack="completo" data-toggle-target="second-name-field-completo"> Segundo nombre o apellido en bolsa (+3€)</label>
                 <div class="extra-field" id="second-name-field-completo">
                   <label>Segundo nombre / apellido para la bolsa</label>
-                  <input type="text" id="second-name-value-completo" placeholder="Ej. Martín">
+                  <input type="text" id="second-name-value-completo" placeholder="Ej. Martín / García" maxlength="28" autocomplete="additional-name">
                 </div>
               </div>
             </div>

@@ -5454,3 +5454,35 @@ img{max-width:100%;}
     font-size:.98rem !important;
   }
 }
+
+/* ===== Nombre de bolsa: 1 nombre incluido + extra opcional ===== */
+.label-note {
+  font-weight: 600;
+  color: #8a7280;
+  font-size: 0.9em;
+}
+
+.field-help {
+  margin: -6px 0 12px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #7b6f76;
+}
+
+.extra-field input {
+  margin-top: 6px;
+}
+
+.payment-modal-summary span:nth-child(3) {
+  background: #fff7fb;
+  border: 1px solid #f6d7e4;
+  border-radius: 14px;
+  padding: 8px 10px;
+}
+
+
+/* Language switch */
+.lang-switch { display:inline-flex; align-items:center; gap:4px; padding:4px; border-radius:999px; background:rgba(255,255,255,.75); border:1px solid rgba(226,198,170,.7); margin-left:12px; }
+.lang-switch a { text-decoration:none; font-size:12px; font-weight:800; color:#775c50; padding:5px 9px; border-radius:999px; }
+.lang-switch a.active { background:#fff; color:#d94f86; box-shadow:0 4px 12px rgba(80,45,30,.08); }
+@media (max-width:780px){ .header-inner .lang-switch{ margin-left:auto; margin-right:8px; } .desktop-nav, .header-actions{ display:none; } }
