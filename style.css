@@ -5323,3 +5323,134 @@ img, video{
   .hero-pack-summary-card .hero-badge-floating{font-size:.82rem !important; padding:9px 13px !important;}
   .hero-pack-summary-card .hero-pack-image{height:168px !important;}
 }
+
+/* ===== MOBILE UX AUDIT FINAL — 2026-04-26 ===== */
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{overflow-x:hidden;}
+img{max-width:100%;}
+
+@media (max-width:640px){
+  /* Hero: el titular principal debe dominar más que los títulos de sección */
+  .hero-copy h1,
+  .hero-fixed-copy h1{
+    font-size:clamp(2.55rem, 12.5vw, 3.35rem) !important;
+    line-height:.98 !important;
+    letter-spacing:-.04em !important;
+    max-width:11.2ch !important;
+    margin:0 auto 16px !important;
+    text-wrap:balance !important;
+  }
+
+  .hero-text,
+  .hero-fixed-copy .hero-text{
+    max-width:31ch !important;
+    font-size:1.03rem !important;
+    line-height:1.62 !important;
+  }
+
+  .hero-shell,
+  .hero-fixed-shell{
+    padding:24px 16px 22px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-fixed-actions .btn,
+  .product-bottom .btn,
+  .order-btn{
+    min-height:58px !important;
+    border-radius:999px !important;
+  }
+
+  .hero-mini span,
+  .hero-fixed-mini span{
+    min-height:42px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  /* Cards y secciones: más ritmo vertical y lectura móvil */
+  .section{padding:46px 0 !important;}
+  .section-head{margin-bottom:22px !important;}
+  .section-head h2,
+  .cta-box h2,
+  .value-compact h2,
+  .audience-copy h2{
+    font-size:clamp(2rem, 9vw, 2.65rem) !important;
+    line-height:1.04 !important;
+    max-width:12.5ch !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-wrap:balance !important;
+  }
+  .section-head p,
+  .problem-subcopy,
+  .audience-copy p,
+  .cta-box p{
+    font-size:1rem !important;
+    line-height:1.62 !important;
+  }
+
+  .product-card,
+  .step-card,
+  .problem-card,
+  .review-card,
+  .benefit-card{
+    box-shadow:0 14px 34px rgba(42,34,55,.08) !important;
+  }
+
+  .selector-block label,
+  .option-card,
+  .option-chip,
+  .field input,
+  .field select{
+    min-height:44px !important;
+  }
+
+  /* Modal de pago: más usable en pantalla pequeña */
+  .payment-modal-card{
+    padding:30px 18px 24px !important;
+  }
+  .payment-modal-close{
+    top:12px !important;
+    right:14px !important;
+    width:44px !important;
+    height:44px !important;
+  }
+  .payment-modal-card h3{
+    font-size:clamp(2.15rem, 10.5vw, 2.85rem) !important;
+    line-height:1 !important;
+    margin-bottom:16px !important;
+  }
+  .payment-modal-title-separator{
+    margin:0 auto 20px !important;
+  }
+  .payment-modal-summary{
+    margin:0 auto 20px !important;
+  }
+  .payment-modal-actions{margin-top:18px !important;}
+
+  /* Footer / contacto: cabeceras claras y enlaces cómodos */
+  .footer-col h3,
+  .footer-col h4{
+    font-size:1.25rem !important;
+    margin-bottom:12px !important;
+  }
+  .footer-col a{
+    display:inline-flex !important;
+    min-height:36px !important;
+    align-items:center !important;
+  }
+}
+
+@media (max-width:380px){
+  .hero-copy h1,
+  .hero-fixed-copy h1{
+    font-size:clamp(2.38rem, 12vw, 2.78rem) !important;
+    max-width:11ch !important;
+  }
+  .hero-text,
+  .hero-fixed-copy .hero-text{
+    font-size:.98rem !important;
+  }
+}
