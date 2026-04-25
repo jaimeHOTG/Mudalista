@@ -154,16 +154,16 @@
 
   const IMAGE_MAP = {
     guarderia: {
-      pv: { basico: "assets/guarderia_pv_basico.jpg", suave: "assets/guarderia_pv_suave.jpg", ilustrado: "assets/guarderia_pv_ilustrado.jpg" },
-      oi: { basico: "assets/guarderia_oi_basico.jpg", suave: "assets/guarderia_oi_suave.jpg", ilustrado: "assets/guarderia_oi_ilustrado.jpg" }
+      pv: { basico: "assets/guarderia_pv_basico.webp", suave: "assets/guarderia_pv_suave.webp", ilustrado: "assets/guarderia_pv_ilustrado.webp" },
+      oi: { basico: "assets/guarderia_oi_basico.webp", suave: "assets/guarderia_oi_suave.webp", ilustrado: "assets/guarderia_oi_ilustrado.webp" }
     },
     infantil: {
-      pv: { basico: "assets/infantil_pv_basico.jpg", suave: "assets/infantil_pv_suave.jpg", ilustrado: "assets/infantil_pv_ilustrado.jpg" },
-      oi: { basico: "assets/infantil_oi_basico.jpg", suave: "assets/infantil_oi_suave.jpg", ilustrado: "assets/infantil_oi_ilustrado.jpg" }
+      pv: { basico: "assets/infantil_pv_basico.webp", suave: "assets/infantil_pv_suave.webp", ilustrado: "assets/infantil_pv_ilustrado.webp" },
+      oi: { basico: "assets/infantil_oi_basico.webp", suave: "assets/infantil_oi_suave.webp", ilustrado: "assets/infantil_oi_ilustrado.webp" }
     },
     completo: {
-      pv: { basico: "assets/completo_pv_basico.jpg", suave: "assets/completo_pv_suave.jpg", ilustrado: "assets/completo_pv_ilustrado.jpg" },
-      oi: { basico: "assets/completo_oi_basico.jpg", suave: "assets/completo_oi_suave.jpg", ilustrado: "assets/completo_oi_ilustrado.jpg" }
+      pv: { basico: "assets/completo_pv_basico.webp", suave: "assets/completo_pv_suave.webp", ilustrado: "assets/completo_pv_ilustrado.webp" },
+      oi: { basico: "assets/completo_oi_basico.webp", suave: "assets/completo_oi_suave.webp", ilustrado: "assets/completo_oi_ilustrado.webp" }
     }
   };
 
@@ -282,7 +282,7 @@
     const style = getStyle(pack);
 
     if (pack === "guarderia" && getSize("guarderia") === "0-6 meses" && season === "pv" && style === "suave") {
-      img.src = "assets/guarderia_0-6_tierra.jpg";
+      img.src = "assets/guarderia_0-6_tierra.webp";
       return;
     }
 
@@ -529,7 +529,7 @@
         size: "0-6 meses",
         season: "pv",
         style: "suave",
-        src: "assets/guarderia_0-6_tierra.jpg"
+        src: "assets/guarderia_0-6_tierra.webp"
       }
     ]
   };
